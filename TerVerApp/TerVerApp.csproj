@@ -85,13 +85,13 @@
     <None Include="Resources\Без имени-2.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\Без имени-1.jpg" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\Без имени-1.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Без имени-3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Без имени-12.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

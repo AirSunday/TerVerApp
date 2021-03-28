@@ -23,7 +23,6 @@ namespace TerVerApp
             {
                 string s = txtbxInput.Text;
                 List<double> input = s.Split(new char[] { ' ' }, StringSplitOptions.RemoveEmptyEntries).Select(double.Parse).ToList();
-                input.Sort();
                 if (flag)
                     lblStatus.Text = "Статус: Ооо, повезло, повезло!";
                 return input;
@@ -51,7 +50,6 @@ namespace TerVerApp
                         input.Add(str2[0]);
                     }
                 }
-                input.Sort();
                 if(flag)
                     lblStatus.Text = "Статус: Ооо, повезло, повезло!";
                 return input;
@@ -73,17 +71,33 @@ namespace TerVerApp
             else
                 calc = new Calculator(ParseManyN());
 
+            // Выборочный начальный момент n-ого порядка
             txtbxM1.Text = calc.mN(1);
             txtbxM2.Text = calc.mN(2);
             txtbxM3.Text = calc.mN(3);
             txtbxM4.Text = calc.mN(4);
 
+            // Выборочный центральный момент n-ого порядка
             txtbxV2.Text = calc.vN(2);
             txtbxV3.Text = calc.vN(3);
             txtbxV4.Text = calc.vN(4);
             txtbxV5.Text = calc.vN(5);
 
+            // Оценка Дисперсии
             txtbxSx.Text = calc.Sx();
+
+            // Мода и Медиана
+            txtbxMed.Text = calc.XMed();
+            txtbxMod.Text = calc.XMod();
+
+            // Коэф. Ас. и Екс.
+            txtbxKas.Text = calc.Kas();
+            txtbxKex.Text = calc.Kex();
+
+            // Вариационный ряд
+            var seq = calc.Sequence;
+            seq.Sort();
+            txtbxVarSeq.Text = string.Join(" ", seq.ToArray());
         }
     }
 }
