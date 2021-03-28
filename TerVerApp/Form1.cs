@@ -24,12 +24,25 @@ namespace TerVerApp
                 string s = txtbxInput.Text;
                 List<double> input = s.Split(new char[] { ' ' }, StringSplitOptions.RemoveEmptyEntries).Select(double.Parse).ToList();
                 if (flag)
+                {
                     lblStatus.Text = "Статус: Ооо, повезло, повезло!";
+                    lblStatus.ForeColor = Color.Green;
+                    txtbxInput.Focus();
+                }
                 return input;
             }
             catch
             {
+                if (!flag)
+                {
+                    lblStatus.Text = "Статус: Ввод некорректен!";
+                    lblStatus.ForeColor = Color.Red;
+                    txtbxInput.Focus();
+                    return null;
+                }
                 lblStatus.Text = "Статус: Обычный метод - ошибка. Выбран метод с большими N!";
+                lblStatus.ForeColor = Color.Blue;
+                txtbxInput.Focus();
                 rbN.Checked = true;
                 rbStandart.Checked = false;
                 return ParseManyN(false);
@@ -50,13 +63,26 @@ namespace TerVerApp
                         input.Add(str2[0]);
                     }
                 }
-                if(flag)
+                if (flag)
+                {
                     lblStatus.Text = "Статус: Ооо, повезло, повезло!";
+                    lblStatus.ForeColor = Color.Green;
+                    txtbxInput.Focus();
+                }
                 return input;
             }
             catch
             {
+                if (!flag)
+                {
+                    lblStatus.Text = "Статус: Ввод некорректен!";
+                    lblStatus.ForeColor = Color.Red;
+                    txtbxInput.Focus();
+                    return null;
+                }
                 lblStatus.Text = "Статус: При больших N - ошибка. Выбран обычный метод!";
+                lblStatus.ForeColor = Color.Blue;
+                txtbxInput.Focus();
                 rbN.Checked = false;
                 rbStandart.Checked = true;
                 return ParseStandart(false);
@@ -65,11 +91,22 @@ namespace TerVerApp
 
         private void btnCalc_Click(object sender, EventArgs e)
         {
+            if (txtbxInput.Text == "")
+            {
+                lblStatus.Text = "Статус: Ничего не введено!";
+                lblStatus.ForeColor = Color.Red;
+                txtbxInput.Focus();
+                return;
+            }
+                
             Calculator calc;
             if (rbStandart.Checked)
                 calc = new Calculator(ParseStandart());
             else
                 calc = new Calculator(ParseManyN());
+
+            if (calc.Sequence == null)
+                return;
 
             // Выборочный начальный момент n-ого порядка
             txtbxM1.Text = calc.mN(1);
