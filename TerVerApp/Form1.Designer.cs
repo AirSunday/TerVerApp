@@ -82,6 +82,7 @@ namespace TerVerApp
             this.txtbxVarSeq = new System.Windows.Forms.TextBox();
             this.tableLayoutPanel6 = new System.Windows.Forms.TableLayoutPanel();
             this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
             this.grpbxMat.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this.grpbxDisp.SuspendLayout();
@@ -743,12 +744,25 @@ namespace TerVerApp
             this.label3.Text = "Обычный ввод - 1 2 3 4 5   |   При больших N - 1:10 2:5 3:3 4:2";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
+            // label4
+            // 
+            this.label4.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label4.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label4.Location = new System.Drawing.Point(9, 530);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(947, 24);
+            this.label4.TabIndex = 15;
+            this.label4.Text = "Разработчики не несут отвественности за неправильное решение. Спасибо, что вы с н" +
+    "ами!";
+            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // Form1
             // 
             this.AcceptButton = this.btnCalc;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(973, 521);
+            this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
@@ -761,6 +775,8 @@ namespace TerVerApp
             this.Controls.Add(this.grpbxDisp);
             this.Controls.Add(this.grpbxMat);
             this.Controls.Add(this.txtbxInput);
+            this.MaximumSize = new System.Drawing.Size(989, 644);
+            this.MinimumSize = new System.Drawing.Size(989, 560);
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Изи ТерВер сдал!";
@@ -847,6 +863,7 @@ namespace TerVerApp
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel6;
         private System.Windows.Forms.TextBox txtbxVarSeq;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label4;
     }
 }
 
