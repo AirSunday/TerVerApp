@@ -479,7 +479,7 @@ namespace TerVerApp
             this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label1.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label1.Location = new System.Drawing.Point(484, 488);
+            this.label1.Location = new System.Drawing.Point(490, 488);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(469, 24);
             this.label1.TabIndex = 11;
