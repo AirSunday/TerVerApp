@@ -135,6 +135,21 @@ namespace TerVerApp
             var seq = calc.Sequence;
             seq.Sort();
             txtbxVarSeq.Text = string.Join(" ", seq.ToArray());
+
+            TableObject tableObject = new TableObject();
+            object[,] table = tableObject.CreateTable(seq);
+            tableGist.ColumnCount = tableObject.CountColumn;
+            tableGist.RowCount = tableObject.CountRow + 1;
+
+            for (int i = 0; i < tableObject.CountColumn; i++)
+            {
+                for (int j = 0; j < tableObject.CountRow; j++)
+                {
+                    Label label = new Label();
+                    label.Text = table[i, j].ToString();
+                    tableGist.Controls.Add(label, i, j + 1);
+                }
+            }
         }
     }
 }
