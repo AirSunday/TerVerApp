@@ -15,6 +15,7 @@ namespace TerVerApp
         public Form1()
         {
             InitializeComponent();
+            
         }
 
         public List<double> ParseStandart(bool flag = true)
@@ -92,6 +93,8 @@ namespace TerVerApp
 
         private void btnCalc_Click(object sender, EventArgs e)
         {
+            tableGist.Visible = false;
+            tableGist.Controls.Clear();
             if (txtbxInput.Text == "")
             {
                 lblStatus.Text = "Статус: Ничего не введено!";
@@ -145,27 +148,56 @@ namespace TerVerApp
             tbxH.Text = (tableObject.CountRow).ToString();
             tbxS.Text = (tableObject.Delt).ToString();
 
-
-            for (int j = 0; j < tableObject.CountRow; j++)
+            for (int j = 0; j <= tableObject.CountRow; j++)
             {
                 Label label1 = new Label();
                 Label label2 = new Label();
                 Label label3 = new Label();
                 Label label4 = new Label();
+                label1.AutoSize = false;
+                label2.AutoSize = false;
+                label3.AutoSize = false;
+                label4.AutoSize = false;
+                label1.TextAlign = ContentAlignment.MiddleCenter;
+                label2.TextAlign = ContentAlignment.MiddleCenter;
+                label3.TextAlign = ContentAlignment.MiddleCenter;
+                label4.TextAlign = ContentAlignment.MiddleCenter;
+                label1.Dock = DockStyle.Fill;
+                label2.Dock = DockStyle.Fill;
+                label3.Dock = DockStyle.Fill;
+                label4.Dock = DockStyle.Fill;
 
-                label1.Text = table.Num[j].ToString();
-                tableGist.Controls.Add(label1, 0, j + 1);
+                if (j == 0)
+                {
+                    label1.Text = "№";
+                    label2.Text = "Интервал";
+                    label3.Text = "Частота";
+                    label4.Text = "Высота столбца";
+                    label1.Font = new Font(label7.Font.Name, 8.25f, label7.Font.Style);
+                    label2.Font = new Font(label7.Font.Name, 8.25f, label7.Font.Style);
+                    label3.Font = new Font(label7.Font.Name, 8.25f, label7.Font.Style);
+                    label4.Font = new Font(label7.Font.Name, 8.25f, label7.Font.Style);
 
-                label2.Text = table.Inter[j].ToString();
-                tableGist.Controls.Add(label2, 1, j + 1);
+                    tableGist.Controls.Add(label1, 0, 0);
+                    tableGist.Controls.Add(label2, 1, 0);
+                    tableGist.Controls.Add(label3, 2, 0);
+                    tableGist.Controls.Add(label4, 3, 0);
+                    continue;
+                }
 
-                label3.Text = table.Chast[j].ToString();
-                tableGist.Controls.Add(label3, 2, j + 1);
+                label1.Text = table.Num[j-1].ToString();
+                tableGist.Controls.Add(label1, 0, j);
 
-                label4.Text = table.Hight[j].ToString();
-                tableGist.Controls.Add(label4, 3, j + 1);
+                label2.Text = "[ " + table.Inter[j-1].Key.ToString() + " ; " + table.Inter[j-1].Value.ToString() + " ]";
+                tableGist.Controls.Add(label2, 1, j);
+
+                label3.Text = table.Chast[j-1].ToString();
+                tableGist.Controls.Add(label3, 2, j);
+
+                label4.Text = table.Hight[j-1].ToString();
+                tableGist.Controls.Add(label4, 3, j);
             }
-           
+            tableGist.Visible = true;
         }
     }
 }

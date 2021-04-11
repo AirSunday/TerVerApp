@@ -119,20 +119,18 @@ namespace TerVerApp
             // txtbxInput
             // 
             this.txtbxInput.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.txtbxInput.Location = new System.Drawing.Point(16, 15);
-            this.txtbxInput.Margin = new System.Windows.Forms.Padding(4);
+            this.txtbxInput.Location = new System.Drawing.Point(12, 12);
             this.txtbxInput.Name = "txtbxInput";
-            this.txtbxInput.Size = new System.Drawing.Size(624, 26);
+            this.txtbxInput.Size = new System.Drawing.Size(469, 22);
             this.txtbxInput.TabIndex = 0;
             // 
             // rbStandart
             // 
             this.rbStandart.AutoSize = true;
             this.rbStandart.Checked = true;
-            this.rbStandart.Location = new System.Drawing.Point(8, 23);
-            this.rbStandart.Margin = new System.Windows.Forms.Padding(4);
+            this.rbStandart.Location = new System.Drawing.Point(6, 19);
             this.rbStandart.Name = "rbStandart";
-            this.rbStandart.Size = new System.Drawing.Size(126, 21);
+            this.rbStandart.Size = new System.Drawing.Size(99, 17);
             this.rbStandart.TabIndex = 2;
             this.rbStandart.TabStop = true;
             this.rbStandart.Text = "Обычный ввод";
@@ -141,10 +139,9 @@ namespace TerVerApp
             // rbN
             // 
             this.rbN.AutoSize = true;
-            this.rbN.Location = new System.Drawing.Point(148, 23);
-            this.rbN.Margin = new System.Windows.Forms.Padding(4);
+            this.rbN.Location = new System.Drawing.Point(111, 19);
             this.rbN.Name = "rbN";
-            this.rbN.Size = new System.Drawing.Size(129, 21);
+            this.rbN.Size = new System.Drawing.Size(102, 17);
             this.rbN.TabIndex = 3;
             this.rbN.Text = "При больших N";
             this.rbN.UseVisualStyleBackColor = true;
@@ -153,10 +150,9 @@ namespace TerVerApp
             // 
             this.btnM1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btnM1.Enabled = false;
-            this.btnM1.Location = new System.Drawing.Point(4, 4);
-            this.btnM1.Margin = new System.Windows.Forms.Padding(4);
+            this.btnM1.Location = new System.Drawing.Point(3, 3);
             this.btnM1.Name = "btnM1";
-            this.btnM1.Size = new System.Drawing.Size(97, 38);
+            this.btnM1.Size = new System.Drawing.Size(72, 31);
             this.btnM1.TabIndex = 3;
             this.btnM1.Text = "m1";
             this.btnM1.UseVisualStyleBackColor = true;
@@ -165,11 +161,9 @@ namespace TerVerApp
             // 
             this.grpbxMat.Controls.Add(this.pbMat);
             this.grpbxMat.Controls.Add(this.tableLayoutPanel1);
-            this.grpbxMat.Location = new System.Drawing.Point(16, 140);
-            this.grpbxMat.Margin = new System.Windows.Forms.Padding(4);
+            this.grpbxMat.Location = new System.Drawing.Point(12, 114);
             this.grpbxMat.Name = "grpbxMat";
-            this.grpbxMat.Padding = new System.Windows.Forms.Padding(4);
-            this.grpbxMat.Size = new System.Drawing.Size(625, 215);
+            this.grpbxMat.Size = new System.Drawing.Size(469, 175);
             this.grpbxMat.TabIndex = 5;
             this.grpbxMat.TabStop = false;
             this.grpbxMat.Text = "Выборочный начальный момент n-ого порядка (m1 - оценка мат. ожидания)";
@@ -181,10 +175,9 @@ namespace TerVerApp
             | System.Windows.Forms.AnchorStyles.Right)));
             this.pbMat.Image = ((System.Drawing.Image)(resources.GetObject("pbMat.Image")));
             this.pbMat.InitialImage = null;
-            this.pbMat.Location = new System.Drawing.Point(293, 23);
-            this.pbMat.Margin = new System.Windows.Forms.Padding(4);
+            this.pbMat.Location = new System.Drawing.Point(220, 19);
             this.pbMat.Name = "pbMat";
-            this.pbMat.Size = new System.Drawing.Size(324, 185);
+            this.pbMat.Size = new System.Drawing.Size(243, 150);
             this.pbMat.TabIndex = 1;
             this.pbMat.TabStop = false;
             // 
@@ -195,7 +188,7 @@ namespace TerVerApp
             this.tableLayoutPanel1.ColumnCount = 2;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 37.5F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 62.5F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 27F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanel1.Controls.Add(this.txtbxM4, 1, 3);
             this.tableLayoutPanel1.Controls.Add(this.txtbxM3, 1, 2);
             this.tableLayoutPanel1.Controls.Add(this.txtbxM2, 1, 1);
@@ -204,27 +197,25 @@ namespace TerVerApp
             this.tableLayoutPanel1.Controls.Add(this.btnM2, 0, 1);
             this.tableLayoutPanel1.Controls.Add(this.btnM1, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.txtbxM1, 1, 0);
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(8, 23);
-            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(4);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(6, 19);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 4;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(280, 185);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(210, 150);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
             // txtbxM4
             // 
             this.txtbxM4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.txtbxM4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.txtbxM4.Location = new System.Drawing.Point(109, 142);
-            this.txtbxM4.Margin = new System.Windows.Forms.Padding(4);
+            this.txtbxM4.Location = new System.Drawing.Point(81, 114);
             this.txtbxM4.Multiline = true;
             this.txtbxM4.Name = "txtbxM4";
             this.txtbxM4.ReadOnly = true;
-            this.txtbxM4.Size = new System.Drawing.Size(167, 39);
+            this.txtbxM4.Size = new System.Drawing.Size(126, 33);
             this.txtbxM4.TabIndex = 12;
             this.txtbxM4.TabStop = false;
             // 
@@ -232,12 +223,11 @@ namespace TerVerApp
             // 
             this.txtbxM3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.txtbxM3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.txtbxM3.Location = new System.Drawing.Point(109, 96);
-            this.txtbxM3.Margin = new System.Windows.Forms.Padding(4);
+            this.txtbxM3.Location = new System.Drawing.Point(81, 77);
             this.txtbxM3.Multiline = true;
             this.txtbxM3.Name = "txtbxM3";
             this.txtbxM3.ReadOnly = true;
-            this.txtbxM3.Size = new System.Drawing.Size(167, 38);
+            this.txtbxM3.Size = new System.Drawing.Size(126, 31);
             this.txtbxM3.TabIndex = 11;
             this.txtbxM3.TabStop = false;
             // 
@@ -245,12 +235,11 @@ namespace TerVerApp
             // 
             this.txtbxM2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.txtbxM2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.txtbxM2.Location = new System.Drawing.Point(109, 50);
-            this.txtbxM2.Margin = new System.Windows.Forms.Padding(4);
+            this.txtbxM2.Location = new System.Drawing.Point(81, 40);
             this.txtbxM2.Multiline = true;
             this.txtbxM2.Name = "txtbxM2";
             this.txtbxM2.ReadOnly = true;
-            this.txtbxM2.Size = new System.Drawing.Size(167, 38);
+            this.txtbxM2.Size = new System.Drawing.Size(126, 31);
             this.txtbxM2.TabIndex = 10;
             this.txtbxM2.TabStop = false;
             // 
@@ -258,10 +247,9 @@ namespace TerVerApp
             // 
             this.btnM4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btnM4.Enabled = false;
-            this.btnM4.Location = new System.Drawing.Point(4, 142);
-            this.btnM4.Margin = new System.Windows.Forms.Padding(4);
+            this.btnM4.Location = new System.Drawing.Point(3, 114);
             this.btnM4.Name = "btnM4";
-            this.btnM4.Size = new System.Drawing.Size(97, 39);
+            this.btnM4.Size = new System.Drawing.Size(72, 33);
             this.btnM4.TabIndex = 9;
             this.btnM4.Text = "m4";
             this.btnM4.UseVisualStyleBackColor = true;
@@ -270,10 +258,9 @@ namespace TerVerApp
             // 
             this.btnM3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btnM3.Enabled = false;
-            this.btnM3.Location = new System.Drawing.Point(4, 96);
-            this.btnM3.Margin = new System.Windows.Forms.Padding(4);
+            this.btnM3.Location = new System.Drawing.Point(3, 77);
             this.btnM3.Name = "btnM3";
-            this.btnM3.Size = new System.Drawing.Size(97, 38);
+            this.btnM3.Size = new System.Drawing.Size(72, 31);
             this.btnM3.TabIndex = 7;
             this.btnM3.Text = "m3";
             this.btnM3.UseVisualStyleBackColor = true;
@@ -282,10 +269,9 @@ namespace TerVerApp
             // 
             this.btnM2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btnM2.Enabled = false;
-            this.btnM2.Location = new System.Drawing.Point(4, 50);
-            this.btnM2.Margin = new System.Windows.Forms.Padding(4);
+            this.btnM2.Location = new System.Drawing.Point(3, 40);
             this.btnM2.Name = "btnM2";
-            this.btnM2.Size = new System.Drawing.Size(97, 38);
+            this.btnM2.Size = new System.Drawing.Size(72, 31);
             this.btnM2.TabIndex = 5;
             this.btnM2.Text = "m2";
             this.btnM2.UseVisualStyleBackColor = true;
@@ -294,12 +280,11 @@ namespace TerVerApp
             // 
             this.txtbxM1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.txtbxM1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.txtbxM1.Location = new System.Drawing.Point(109, 4);
-            this.txtbxM1.Margin = new System.Windows.Forms.Padding(4);
+            this.txtbxM1.Location = new System.Drawing.Point(81, 3);
             this.txtbxM1.Multiline = true;
             this.txtbxM1.Name = "txtbxM1";
             this.txtbxM1.ReadOnly = true;
-            this.txtbxM1.Size = new System.Drawing.Size(167, 38);
+            this.txtbxM1.Size = new System.Drawing.Size(126, 31);
             this.txtbxM1.TabIndex = 4;
             this.txtbxM1.TabStop = false;
             // 
@@ -307,11 +292,9 @@ namespace TerVerApp
             // 
             this.grpbxDisp.Controls.Add(this.pbDisp);
             this.grpbxDisp.Controls.Add(this.tableLayoutPanel2);
-            this.grpbxDisp.Location = new System.Drawing.Point(649, 140);
-            this.grpbxDisp.Margin = new System.Windows.Forms.Padding(4);
+            this.grpbxDisp.Location = new System.Drawing.Point(487, 114);
             this.grpbxDisp.Name = "grpbxDisp";
-            this.grpbxDisp.Padding = new System.Windows.Forms.Padding(4);
-            this.grpbxDisp.Size = new System.Drawing.Size(625, 215);
+            this.grpbxDisp.Size = new System.Drawing.Size(469, 175);
             this.grpbxDisp.TabIndex = 6;
             this.grpbxDisp.TabStop = false;
             this.grpbxDisp.Text = "Выборочный центральный момент n-ого порядка (v2 - дисперсия)";
@@ -323,10 +306,9 @@ namespace TerVerApp
             | System.Windows.Forms.AnchorStyles.Right)));
             this.pbDisp.Image = global::TerVerApp.Properties.Resources.Без_имени_2;
             this.pbDisp.InitialImage = null;
-            this.pbDisp.Location = new System.Drawing.Point(293, 23);
-            this.pbDisp.Margin = new System.Windows.Forms.Padding(4);
+            this.pbDisp.Location = new System.Drawing.Point(220, 19);
             this.pbDisp.Name = "pbDisp";
-            this.pbDisp.Size = new System.Drawing.Size(324, 185);
+            this.pbDisp.Size = new System.Drawing.Size(243, 150);
             this.pbDisp.TabIndex = 1;
             this.pbDisp.TabStop = false;
             // 
@@ -337,7 +319,7 @@ namespace TerVerApp
             this.tableLayoutPanel2.ColumnCount = 2;
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 37.5F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 62.5F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 27F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanel2.Controls.Add(this.txtbxV5, 1, 3);
             this.tableLayoutPanel2.Controls.Add(this.txtbxV4, 1, 2);
             this.tableLayoutPanel2.Controls.Add(this.txtbxV3, 1, 1);
@@ -346,27 +328,25 @@ namespace TerVerApp
             this.tableLayoutPanel2.Controls.Add(this.btnV3, 0, 1);
             this.tableLayoutPanel2.Controls.Add(this.btnV2, 0, 0);
             this.tableLayoutPanel2.Controls.Add(this.txtbxV2, 1, 0);
-            this.tableLayoutPanel2.Location = new System.Drawing.Point(8, 23);
-            this.tableLayoutPanel2.Margin = new System.Windows.Forms.Padding(4);
+            this.tableLayoutPanel2.Location = new System.Drawing.Point(6, 19);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 4;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(280, 185);
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(210, 150);
             this.tableLayoutPanel2.TabIndex = 0;
             // 
             // txtbxV5
             // 
             this.txtbxV5.Dock = System.Windows.Forms.DockStyle.Fill;
             this.txtbxV5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.txtbxV5.Location = new System.Drawing.Point(109, 142);
-            this.txtbxV5.Margin = new System.Windows.Forms.Padding(4);
+            this.txtbxV5.Location = new System.Drawing.Point(81, 114);
             this.txtbxV5.Multiline = true;
             this.txtbxV5.Name = "txtbxV5";
             this.txtbxV5.ReadOnly = true;
-            this.txtbxV5.Size = new System.Drawing.Size(167, 39);
+            this.txtbxV5.Size = new System.Drawing.Size(126, 33);
             this.txtbxV5.TabIndex = 12;
             this.txtbxV5.TabStop = false;
             // 
@@ -374,12 +354,11 @@ namespace TerVerApp
             // 
             this.txtbxV4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.txtbxV4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.txtbxV4.Location = new System.Drawing.Point(109, 96);
-            this.txtbxV4.Margin = new System.Windows.Forms.Padding(4);
+            this.txtbxV4.Location = new System.Drawing.Point(81, 77);
             this.txtbxV4.Multiline = true;
             this.txtbxV4.Name = "txtbxV4";
             this.txtbxV4.ReadOnly = true;
-            this.txtbxV4.Size = new System.Drawing.Size(167, 38);
+            this.txtbxV4.Size = new System.Drawing.Size(126, 31);
             this.txtbxV4.TabIndex = 11;
             this.txtbxV4.TabStop = false;
             // 
@@ -387,12 +366,11 @@ namespace TerVerApp
             // 
             this.txtbxV3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.txtbxV3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.txtbxV3.Location = new System.Drawing.Point(109, 50);
-            this.txtbxV3.Margin = new System.Windows.Forms.Padding(4);
+            this.txtbxV3.Location = new System.Drawing.Point(81, 40);
             this.txtbxV3.Multiline = true;
             this.txtbxV3.Name = "txtbxV3";
             this.txtbxV3.ReadOnly = true;
-            this.txtbxV3.Size = new System.Drawing.Size(167, 38);
+            this.txtbxV3.Size = new System.Drawing.Size(126, 31);
             this.txtbxV3.TabIndex = 10;
             this.txtbxV3.TabStop = false;
             // 
@@ -400,10 +378,9 @@ namespace TerVerApp
             // 
             this.btnV5.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btnV5.Enabled = false;
-            this.btnV5.Location = new System.Drawing.Point(4, 142);
-            this.btnV5.Margin = new System.Windows.Forms.Padding(4);
+            this.btnV5.Location = new System.Drawing.Point(3, 114);
             this.btnV5.Name = "btnV5";
-            this.btnV5.Size = new System.Drawing.Size(97, 39);
+            this.btnV5.Size = new System.Drawing.Size(72, 33);
             this.btnV5.TabIndex = 9;
             this.btnV5.Text = "v5";
             this.btnV5.UseVisualStyleBackColor = true;
@@ -412,10 +389,9 @@ namespace TerVerApp
             // 
             this.btnV4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btnV4.Enabled = false;
-            this.btnV4.Location = new System.Drawing.Point(4, 96);
-            this.btnV4.Margin = new System.Windows.Forms.Padding(4);
+            this.btnV4.Location = new System.Drawing.Point(3, 77);
             this.btnV4.Name = "btnV4";
-            this.btnV4.Size = new System.Drawing.Size(97, 38);
+            this.btnV4.Size = new System.Drawing.Size(72, 31);
             this.btnV4.TabIndex = 7;
             this.btnV4.Text = "v4";
             this.btnV4.UseVisualStyleBackColor = true;
@@ -424,10 +400,9 @@ namespace TerVerApp
             // 
             this.btnV3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btnV3.Enabled = false;
-            this.btnV3.Location = new System.Drawing.Point(4, 50);
-            this.btnV3.Margin = new System.Windows.Forms.Padding(4);
+            this.btnV3.Location = new System.Drawing.Point(3, 40);
             this.btnV3.Name = "btnV3";
-            this.btnV3.Size = new System.Drawing.Size(97, 38);
+            this.btnV3.Size = new System.Drawing.Size(72, 31);
             this.btnV3.TabIndex = 5;
             this.btnV3.Text = "v3";
             this.btnV3.UseVisualStyleBackColor = true;
@@ -436,10 +411,9 @@ namespace TerVerApp
             // 
             this.btnV2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btnV2.Enabled = false;
-            this.btnV2.Location = new System.Drawing.Point(4, 4);
-            this.btnV2.Margin = new System.Windows.Forms.Padding(4);
+            this.btnV2.Location = new System.Drawing.Point(3, 3);
             this.btnV2.Name = "btnV2";
-            this.btnV2.Size = new System.Drawing.Size(97, 38);
+            this.btnV2.Size = new System.Drawing.Size(72, 31);
             this.btnV2.TabIndex = 3;
             this.btnV2.Text = "v2";
             this.btnV2.UseVisualStyleBackColor = true;
@@ -448,12 +422,11 @@ namespace TerVerApp
             // 
             this.txtbxV2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.txtbxV2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.txtbxV2.Location = new System.Drawing.Point(109, 4);
-            this.txtbxV2.Margin = new System.Windows.Forms.Padding(4);
+            this.txtbxV2.Location = new System.Drawing.Point(81, 3);
             this.txtbxV2.Multiline = true;
             this.txtbxV2.Name = "txtbxV2";
             this.txtbxV2.ReadOnly = true;
-            this.txtbxV2.Size = new System.Drawing.Size(167, 38);
+            this.txtbxV2.Size = new System.Drawing.Size(126, 31);
             this.txtbxV2.TabIndex = 4;
             this.txtbxV2.TabStop = false;
             // 
@@ -461,11 +434,9 @@ namespace TerVerApp
             // 
             this.grpbxSx.Controls.Add(this.pbSx);
             this.grpbxSx.Controls.Add(this.tableLayoutPanel3);
-            this.grpbxSx.Location = new System.Drawing.Point(649, 47);
-            this.grpbxSx.Margin = new System.Windows.Forms.Padding(4);
+            this.grpbxSx.Location = new System.Drawing.Point(487, 38);
             this.grpbxSx.Name = "grpbxSx";
-            this.grpbxSx.Padding = new System.Windows.Forms.Padding(4);
-            this.grpbxSx.Size = new System.Drawing.Size(625, 82);
+            this.grpbxSx.Size = new System.Drawing.Size(469, 67);
             this.grpbxSx.TabIndex = 7;
             this.grpbxSx.TabStop = false;
             this.grpbxSx.Text = "Оценка дисперсии";
@@ -477,10 +448,9 @@ namespace TerVerApp
             | System.Windows.Forms.AnchorStyles.Right)));
             this.pbSx.Image = global::TerVerApp.Properties.Resources.Без_имени_3;
             this.pbSx.InitialImage = null;
-            this.pbSx.Location = new System.Drawing.Point(293, 23);
-            this.pbSx.Margin = new System.Windows.Forms.Padding(4);
+            this.pbSx.Location = new System.Drawing.Point(220, 19);
             this.pbSx.Name = "pbSx";
-            this.pbSx.Size = new System.Drawing.Size(324, 52);
+            this.pbSx.Size = new System.Drawing.Size(243, 42);
             this.pbSx.TabIndex = 1;
             this.pbSx.TabStop = false;
             // 
@@ -491,25 +461,23 @@ namespace TerVerApp
             this.tableLayoutPanel3.ColumnCount = 2;
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 37.5F));
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 62.5F));
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 27F));
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanel3.Controls.Add(this.btnSx, 0, 0);
             this.tableLayoutPanel3.Controls.Add(this.txtbxSx, 1, 0);
-            this.tableLayoutPanel3.Location = new System.Drawing.Point(8, 23);
-            this.tableLayoutPanel3.Margin = new System.Windows.Forms.Padding(4);
+            this.tableLayoutPanel3.Location = new System.Drawing.Point(6, 19);
             this.tableLayoutPanel3.Name = "tableLayoutPanel3";
             this.tableLayoutPanel3.RowCount = 1;
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.tableLayoutPanel3.Size = new System.Drawing.Size(280, 52);
+            this.tableLayoutPanel3.Size = new System.Drawing.Size(210, 42);
             this.tableLayoutPanel3.TabIndex = 0;
             // 
             // btnSx
             // 
             this.btnSx.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btnSx.Enabled = false;
-            this.btnSx.Location = new System.Drawing.Point(4, 4);
-            this.btnSx.Margin = new System.Windows.Forms.Padding(4);
+            this.btnSx.Location = new System.Drawing.Point(3, 3);
             this.btnSx.Name = "btnSx";
-            this.btnSx.Size = new System.Drawing.Size(97, 44);
+            this.btnSx.Size = new System.Drawing.Size(72, 36);
             this.btnSx.TabIndex = 3;
             this.btnSx.Text = "Sx";
             this.btnSx.UseVisualStyleBackColor = true;
@@ -518,21 +486,19 @@ namespace TerVerApp
             // 
             this.txtbxSx.Dock = System.Windows.Forms.DockStyle.Fill;
             this.txtbxSx.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.txtbxSx.Location = new System.Drawing.Point(109, 4);
-            this.txtbxSx.Margin = new System.Windows.Forms.Padding(4);
+            this.txtbxSx.Location = new System.Drawing.Point(81, 3);
             this.txtbxSx.Multiline = true;
             this.txtbxSx.Name = "txtbxSx";
             this.txtbxSx.ReadOnly = true;
-            this.txtbxSx.Size = new System.Drawing.Size(167, 44);
+            this.txtbxSx.Size = new System.Drawing.Size(126, 36);
             this.txtbxSx.TabIndex = 4;
             this.txtbxSx.TabStop = false;
             // 
             // btnCalc
             // 
-            this.btnCalc.Location = new System.Drawing.Point(329, 53);
-            this.btnCalc.Margin = new System.Windows.Forms.Padding(4);
+            this.btnCalc.Location = new System.Drawing.Point(247, 43);
             this.btnCalc.Name = "btnCalc";
-            this.btnCalc.Size = new System.Drawing.Size(100, 59);
+            this.btnCalc.Size = new System.Drawing.Size(75, 48);
             this.btnCalc.TabIndex = 1;
             this.btnCalc.Text = "Calculate";
             this.btnCalc.UseVisualStyleBackColor = true;
@@ -542,11 +508,9 @@ namespace TerVerApp
             // 
             this.grpbxRdBtn.Controls.Add(this.rbStandart);
             this.grpbxRdBtn.Controls.Add(this.rbN);
-            this.grpbxRdBtn.Location = new System.Drawing.Point(16, 47);
-            this.grpbxRdBtn.Margin = new System.Windows.Forms.Padding(4);
+            this.grpbxRdBtn.Location = new System.Drawing.Point(12, 38);
             this.grpbxRdBtn.Name = "grpbxRdBtn";
-            this.grpbxRdBtn.Padding = new System.Windows.Forms.Padding(4);
-            this.grpbxRdBtn.Size = new System.Drawing.Size(305, 65);
+            this.grpbxRdBtn.Size = new System.Drawing.Size(229, 53);
             this.grpbxRdBtn.TabIndex = 9;
             this.grpbxRdBtn.TabStop = false;
             this.grpbxRdBtn.Text = "Метод ввода";
@@ -557,10 +521,9 @@ namespace TerVerApp
             | System.Windows.Forms.AnchorStyles.Right)));
             this.lblStatus.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.lblStatus.ForeColor = System.Drawing.Color.Green;
-            this.lblStatus.Location = new System.Drawing.Point(16, 613);
-            this.lblStatus.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblStatus.Location = new System.Drawing.Point(12, 498);
             this.lblStatus.Name = "lblStatus";
-            this.lblStatus.Size = new System.Drawing.Size(1212, 17);
+            this.lblStatus.Size = new System.Drawing.Size(909, 14);
             this.lblStatus.TabIndex = 10;
             this.lblStatus.Text = "Статус: Хорошо!";
             this.lblStatus.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -570,10 +533,9 @@ namespace TerVerApp
             this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label1.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label1.Location = new System.Drawing.Point(653, 601);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Location = new System.Drawing.Point(490, 488);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(1212, 30);
+            this.label1.Size = new System.Drawing.Size(909, 24);
             this.label1.TabIndex = 11;
             this.label1.Text = "Made by Влад Кармазин и Саша Пономарев. Пользуйся, не благодари!";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -582,11 +544,9 @@ namespace TerVerApp
             // 
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.tableLayoutPanel4);
-            this.groupBox1.Location = new System.Drawing.Point(16, 363);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(4);
+            this.groupBox1.Location = new System.Drawing.Point(12, 295);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(4);
-            this.groupBox1.Size = new System.Drawing.Size(625, 156);
+            this.groupBox1.Size = new System.Drawing.Size(469, 127);
             this.groupBox1.TabIndex = 12;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Мода и Медиана";
@@ -594,10 +554,9 @@ namespace TerVerApp
             // label2
             // 
             this.label2.Font = new System.Drawing.Font("Consolas", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label2.Location = new System.Drawing.Point(296, 14);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Location = new System.Drawing.Point(222, 11);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(324, 139);
+            this.label2.Size = new System.Drawing.Size(243, 113);
             this.label2.TabIndex = 1;
             this.label2.Text = "Xmod (Мода) - наиболее часто встречающееся значение выборки\r\nXmed (Медиана) - зна" +
     "чение выборки являющееся серединой вариационного ряда.";
@@ -607,30 +566,28 @@ namespace TerVerApp
             this.tableLayoutPanel4.ColumnCount = 2;
             this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 37.5F));
             this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 62.5F));
-            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 27F));
+            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanel4.Controls.Add(this.txtbxMed, 1, 1);
             this.tableLayoutPanel4.Controls.Add(this.btnMed, 0, 1);
             this.tableLayoutPanel4.Controls.Add(this.btnMod, 0, 0);
             this.tableLayoutPanel4.Controls.Add(this.txtbxMod, 1, 0);
-            this.tableLayoutPanel4.Location = new System.Drawing.Point(8, 23);
-            this.tableLayoutPanel4.Margin = new System.Windows.Forms.Padding(4);
+            this.tableLayoutPanel4.Location = new System.Drawing.Point(6, 19);
             this.tableLayoutPanel4.Name = "tableLayoutPanel4";
             this.tableLayoutPanel4.RowCount = 2;
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.tableLayoutPanel4.Size = new System.Drawing.Size(280, 119);
+            this.tableLayoutPanel4.Size = new System.Drawing.Size(210, 97);
             this.tableLayoutPanel4.TabIndex = 0;
             // 
             // txtbxMed
             // 
             this.txtbxMed.Dock = System.Windows.Forms.DockStyle.Fill;
             this.txtbxMed.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.txtbxMed.Location = new System.Drawing.Point(109, 63);
-            this.txtbxMed.Margin = new System.Windows.Forms.Padding(4);
+            this.txtbxMed.Location = new System.Drawing.Point(81, 51);
             this.txtbxMed.Multiline = true;
             this.txtbxMed.Name = "txtbxMed";
             this.txtbxMed.ReadOnly = true;
-            this.txtbxMed.Size = new System.Drawing.Size(167, 52);
+            this.txtbxMed.Size = new System.Drawing.Size(126, 43);
             this.txtbxMed.TabIndex = 10;
             this.txtbxMed.TabStop = false;
             // 
@@ -638,10 +595,9 @@ namespace TerVerApp
             // 
             this.btnMed.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btnMed.Enabled = false;
-            this.btnMed.Location = new System.Drawing.Point(4, 63);
-            this.btnMed.Margin = new System.Windows.Forms.Padding(4);
+            this.btnMed.Location = new System.Drawing.Point(3, 51);
             this.btnMed.Name = "btnMed";
-            this.btnMed.Size = new System.Drawing.Size(97, 52);
+            this.btnMed.Size = new System.Drawing.Size(72, 43);
             this.btnMed.TabIndex = 5;
             this.btnMed.Text = "Xmed";
             this.btnMed.UseVisualStyleBackColor = true;
@@ -650,10 +606,9 @@ namespace TerVerApp
             // 
             this.btnMod.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btnMod.Enabled = false;
-            this.btnMod.Location = new System.Drawing.Point(4, 4);
-            this.btnMod.Margin = new System.Windows.Forms.Padding(4);
+            this.btnMod.Location = new System.Drawing.Point(3, 3);
             this.btnMod.Name = "btnMod";
-            this.btnMod.Size = new System.Drawing.Size(97, 51);
+            this.btnMod.Size = new System.Drawing.Size(72, 42);
             this.btnMod.TabIndex = 3;
             this.btnMod.Text = "Xmod";
             this.btnMod.UseVisualStyleBackColor = true;
@@ -662,12 +617,11 @@ namespace TerVerApp
             // 
             this.txtbxMod.Dock = System.Windows.Forms.DockStyle.Fill;
             this.txtbxMod.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.txtbxMod.Location = new System.Drawing.Point(109, 4);
-            this.txtbxMod.Margin = new System.Windows.Forms.Padding(4);
+            this.txtbxMod.Location = new System.Drawing.Point(81, 3);
             this.txtbxMod.Multiline = true;
             this.txtbxMod.Name = "txtbxMod";
             this.txtbxMod.ReadOnly = true;
-            this.txtbxMod.Size = new System.Drawing.Size(167, 51);
+            this.txtbxMod.Size = new System.Drawing.Size(126, 42);
             this.txtbxMod.TabIndex = 4;
             this.txtbxMod.TabStop = false;
             // 
@@ -675,11 +629,9 @@ namespace TerVerApp
             // 
             this.groupBox2.Controls.Add(this.pictureBox1);
             this.groupBox2.Controls.Add(this.tableLayoutPanel5);
-            this.groupBox2.Location = new System.Drawing.Point(649, 363);
-            this.groupBox2.Margin = new System.Windows.Forms.Padding(4);
+            this.groupBox2.Location = new System.Drawing.Point(487, 295);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Padding = new System.Windows.Forms.Padding(4);
-            this.groupBox2.Size = new System.Drawing.Size(625, 224);
+            this.groupBox2.Size = new System.Drawing.Size(469, 182);
             this.groupBox2.TabIndex = 13;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Коэффициент Асимметрии и Эксцесса";
@@ -691,10 +643,9 @@ namespace TerVerApp
             | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox1.Image = global::TerVerApp.Properties.Resources.Без_имени_12;
             this.pictureBox1.InitialImage = null;
-            this.pictureBox1.Location = new System.Drawing.Point(293, 23);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
+            this.pictureBox1.Location = new System.Drawing.Point(220, 19);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(324, 193);
+            this.pictureBox1.Size = new System.Drawing.Size(243, 157);
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
             // 
@@ -703,30 +654,28 @@ namespace TerVerApp
             this.tableLayoutPanel5.ColumnCount = 2;
             this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 37.5F));
             this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 62.5F));
-            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 27F));
+            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanel5.Controls.Add(this.txtbxKex, 1, 1);
             this.tableLayoutPanel5.Controls.Add(this.button1, 0, 1);
             this.tableLayoutPanel5.Controls.Add(this.button2, 0, 0);
             this.tableLayoutPanel5.Controls.Add(this.txtbxKas, 1, 0);
-            this.tableLayoutPanel5.Location = new System.Drawing.Point(8, 23);
-            this.tableLayoutPanel5.Margin = new System.Windows.Forms.Padding(4);
+            this.tableLayoutPanel5.Location = new System.Drawing.Point(6, 19);
             this.tableLayoutPanel5.Name = "tableLayoutPanel5";
             this.tableLayoutPanel5.RowCount = 2;
             this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.tableLayoutPanel5.Size = new System.Drawing.Size(280, 119);
+            this.tableLayoutPanel5.Size = new System.Drawing.Size(210, 97);
             this.tableLayoutPanel5.TabIndex = 0;
             // 
             // txtbxKex
             // 
             this.txtbxKex.Dock = System.Windows.Forms.DockStyle.Fill;
             this.txtbxKex.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.txtbxKex.Location = new System.Drawing.Point(109, 63);
-            this.txtbxKex.Margin = new System.Windows.Forms.Padding(4);
+            this.txtbxKex.Location = new System.Drawing.Point(81, 51);
             this.txtbxKex.Multiline = true;
             this.txtbxKex.Name = "txtbxKex";
             this.txtbxKex.ReadOnly = true;
-            this.txtbxKex.Size = new System.Drawing.Size(167, 52);
+            this.txtbxKex.Size = new System.Drawing.Size(126, 43);
             this.txtbxKex.TabIndex = 10;
             this.txtbxKex.TabStop = false;
             // 
@@ -734,10 +683,9 @@ namespace TerVerApp
             // 
             this.button1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.button1.Enabled = false;
-            this.button1.Location = new System.Drawing.Point(4, 63);
-            this.button1.Margin = new System.Windows.Forms.Padding(4);
+            this.button1.Location = new System.Drawing.Point(3, 51);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(97, 52);
+            this.button1.Size = new System.Drawing.Size(72, 43);
             this.button1.TabIndex = 5;
             this.button1.Text = "Kex";
             this.button1.UseVisualStyleBackColor = true;
@@ -746,10 +694,9 @@ namespace TerVerApp
             // 
             this.button2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.button2.Enabled = false;
-            this.button2.Location = new System.Drawing.Point(4, 4);
-            this.button2.Margin = new System.Windows.Forms.Padding(4);
+            this.button2.Location = new System.Drawing.Point(3, 3);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(97, 51);
+            this.button2.Size = new System.Drawing.Size(72, 42);
             this.button2.TabIndex = 3;
             this.button2.Text = "Kas";
             this.button2.UseVisualStyleBackColor = true;
@@ -758,23 +705,20 @@ namespace TerVerApp
             // 
             this.txtbxKas.Dock = System.Windows.Forms.DockStyle.Fill;
             this.txtbxKas.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.txtbxKas.Location = new System.Drawing.Point(109, 4);
-            this.txtbxKas.Margin = new System.Windows.Forms.Padding(4);
+            this.txtbxKas.Location = new System.Drawing.Point(81, 3);
             this.txtbxKas.Multiline = true;
             this.txtbxKas.Name = "txtbxKas";
             this.txtbxKas.ReadOnly = true;
-            this.txtbxKas.Size = new System.Drawing.Size(167, 51);
+            this.txtbxKas.Size = new System.Drawing.Size(126, 42);
             this.txtbxKas.TabIndex = 4;
             this.txtbxKas.TabStop = false;
             // 
             // groupBox3
             // 
             this.groupBox3.Controls.Add(this.tableLayoutPanel6);
-            this.groupBox3.Location = new System.Drawing.Point(16, 527);
-            this.groupBox3.Margin = new System.Windows.Forms.Padding(4);
+            this.groupBox3.Location = new System.Drawing.Point(12, 428);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Padding = new System.Windows.Forms.Padding(4);
-            this.groupBox3.Size = new System.Drawing.Size(625, 82);
+            this.groupBox3.Size = new System.Drawing.Size(469, 67);
             this.groupBox3.TabIndex = 8;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Вариационный ряд";
@@ -785,36 +729,33 @@ namespace TerVerApp
             | System.Windows.Forms.AnchorStyles.Left)));
             this.tableLayoutPanel6.ColumnCount = 1;
             this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 27F));
+            this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanel6.Controls.Add(this.txtbxVarSeq, 0, 0);
-            this.tableLayoutPanel6.Location = new System.Drawing.Point(8, 23);
-            this.tableLayoutPanel6.Margin = new System.Windows.Forms.Padding(4);
+            this.tableLayoutPanel6.Location = new System.Drawing.Point(6, 19);
             this.tableLayoutPanel6.Name = "tableLayoutPanel6";
             this.tableLayoutPanel6.RowCount = 1;
             this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel6.Size = new System.Drawing.Size(609, 52);
+            this.tableLayoutPanel6.Size = new System.Drawing.Size(457, 42);
             this.tableLayoutPanel6.TabIndex = 0;
             // 
             // txtbxVarSeq
             // 
             this.txtbxVarSeq.Dock = System.Windows.Forms.DockStyle.Fill;
             this.txtbxVarSeq.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.txtbxVarSeq.Location = new System.Drawing.Point(4, 4);
-            this.txtbxVarSeq.Margin = new System.Windows.Forms.Padding(4);
+            this.txtbxVarSeq.Location = new System.Drawing.Point(3, 3);
             this.txtbxVarSeq.Multiline = true;
             this.txtbxVarSeq.Name = "txtbxVarSeq";
             this.txtbxVarSeq.ReadOnly = true;
-            this.txtbxVarSeq.Size = new System.Drawing.Size(601, 44);
+            this.txtbxVarSeq.Size = new System.Drawing.Size(451, 36);
             this.txtbxVarSeq.TabIndex = 4;
             this.txtbxVarSeq.TabStop = false;
             // 
             // label3
             // 
             this.label3.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label3.Location = new System.Drawing.Point(649, 15);
-            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label3.Location = new System.Drawing.Point(487, 12);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(625, 28);
+            this.label3.Size = new System.Drawing.Size(469, 23);
             this.label3.TabIndex = 14;
             this.label3.Text = "Обычный ввод - 1 2 3 4 5   |   При больших N - 1:10 2:5 3:3 4:2";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -823,10 +764,9 @@ namespace TerVerApp
             // 
             this.label4.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label4.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label4.Location = new System.Drawing.Point(306, 652);
-            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label4.Location = new System.Drawing.Point(230, 530);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(1263, 30);
+            this.label4.Size = new System.Drawing.Size(947, 24);
             this.label4.TabIndex = 15;
             this.label4.Text = "Разработчики не несут отвественности за неправильное решение. Спасибо, что вы с н" +
     "ами!";
@@ -839,89 +779,45 @@ namespace TerVerApp
             this.tableGist.BackColor = System.Drawing.SystemColors.Control;
             this.tableGist.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.Single;
             this.tableGist.ColumnCount = 4;
-            this.tableGist.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.tableGist.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.tableGist.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.tableGist.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableGist.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 40F));
+            this.tableGist.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableGist.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 60F));
+            this.tableGist.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableGist.Controls.Add(this.label5, 0, 0);
             this.tableGist.Controls.Add(this.label6, 1, 0);
             this.tableGist.Controls.Add(this.label7, 2, 0);
             this.tableGist.Controls.Add(this.label8, 3, 0);
-            this.tableGist.Location = new System.Drawing.Point(1300, 183);
-            this.tableGist.MinimumSize = new System.Drawing.Size(572, 68);
+            this.tableGist.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.tableGist.Location = new System.Drawing.Point(963, 141);
+            this.tableGist.Margin = new System.Windows.Forms.Padding(2);
+            this.tableGist.MaximumSize = new System.Drawing.Size(439, 1000);
             this.tableGist.Name = "tableGist";
             this.tableGist.RowCount = 1;
-            this.tableGist.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableGist.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableGist.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableGist.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableGist.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableGist.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableGist.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableGist.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableGist.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableGist.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableGist.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableGist.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableGist.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableGist.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableGist.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableGist.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableGist.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableGist.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableGist.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableGist.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableGist.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableGist.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableGist.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableGist.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableGist.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableGist.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableGist.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableGist.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableGist.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableGist.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableGist.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableGist.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableGist.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableGist.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableGist.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableGist.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableGist.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableGist.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableGist.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableGist.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableGist.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableGist.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableGist.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableGist.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableGist.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableGist.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableGist.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableGist.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableGist.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableGist.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableGist.Size = new System.Drawing.Size(577, 70);
+            this.tableGist.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 61F));
+            this.tableGist.Size = new System.Drawing.Size(439, 63);
             this.tableGist.TabIndex = 16;
+            this.tableGist.Visible = false;
             // 
             // label5
             // 
             this.label5.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label5.Location = new System.Drawing.Point(4, 1);
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label5.Location = new System.Drawing.Point(3, 1);
+            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(137, 68);
+            this.label5.Size = new System.Drawing.Size(36, 61);
             this.label5.TabIndex = 0;
-            this.label5.Text = "Номер интервала";
+            this.label5.Text = "№";
             this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label6
             // 
             this.label6.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label6.Location = new System.Drawing.Point(148, 1);
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label6.Location = new System.Drawing.Point(44, 1);
+            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(137, 68);
+            this.label6.Size = new System.Drawing.Size(163, 61);
             this.label6.TabIndex = 1;
             this.label6.Text = "Интервал";
             this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -929,10 +825,11 @@ namespace TerVerApp
             // label7
             // 
             this.label7.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label7.Location = new System.Drawing.Point(292, 1);
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label7.Location = new System.Drawing.Point(212, 1);
+            this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(137, 68);
+            this.label7.Size = new System.Drawing.Size(56, 61);
             this.label7.TabIndex = 2;
             this.label7.Text = "Частота";
             this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -940,10 +837,11 @@ namespace TerVerApp
             // label8
             // 
             this.label8.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label8.Location = new System.Drawing.Point(436, 1);
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label8.Location = new System.Drawing.Point(273, 1);
+            this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(137, 68);
+            this.label8.Size = new System.Drawing.Size(163, 61);
             this.label8.TabIndex = 3;
             this.label8.Text = "Высота столбца";
             this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -951,11 +849,9 @@ namespace TerVerApp
             // groupBox4
             // 
             this.groupBox4.Controls.Add(this.tableLayoutPanel7);
-            this.groupBox4.Location = new System.Drawing.Point(1300, 18);
-            this.groupBox4.Margin = new System.Windows.Forms.Padding(4);
+            this.groupBox4.Location = new System.Drawing.Point(975, 15);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Padding = new System.Windows.Forms.Padding(4);
-            this.groupBox4.Size = new System.Drawing.Size(565, 149);
+            this.groupBox4.Size = new System.Drawing.Size(424, 121);
             this.groupBox4.TabIndex = 14;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Даные для гистограммы";
@@ -965,30 +861,28 @@ namespace TerVerApp
             this.tableLayoutPanel7.ColumnCount = 2;
             this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 37.5F));
             this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 62.5F));
-            this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 27F));
+            this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanel7.Controls.Add(this.tbxS, 1, 1);
             this.tableLayoutPanel7.Controls.Add(this.button3, 0, 1);
             this.tableLayoutPanel7.Controls.Add(this.button4, 0, 0);
             this.tableLayoutPanel7.Controls.Add(this.tbxH, 1, 0);
-            this.tableLayoutPanel7.Location = new System.Drawing.Point(8, 23);
-            this.tableLayoutPanel7.Margin = new System.Windows.Forms.Padding(4);
+            this.tableLayoutPanel7.Location = new System.Drawing.Point(6, 19);
             this.tableLayoutPanel7.Name = "tableLayoutPanel7";
             this.tableLayoutPanel7.RowCount = 2;
             this.tableLayoutPanel7.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.tableLayoutPanel7.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.tableLayoutPanel7.Size = new System.Drawing.Size(313, 119);
+            this.tableLayoutPanel7.Size = new System.Drawing.Size(235, 97);
             this.tableLayoutPanel7.TabIndex = 0;
             // 
             // tbxS
             // 
             this.tbxS.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tbxS.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.tbxS.Location = new System.Drawing.Point(121, 63);
-            this.tbxS.Margin = new System.Windows.Forms.Padding(4);
+            this.tbxS.Location = new System.Drawing.Point(91, 51);
             this.tbxS.Multiline = true;
             this.tbxS.Name = "tbxS";
             this.tbxS.ReadOnly = true;
-            this.tbxS.Size = new System.Drawing.Size(188, 52);
+            this.tbxS.Size = new System.Drawing.Size(141, 43);
             this.tbxS.TabIndex = 10;
             this.tbxS.TabStop = false;
             // 
@@ -996,10 +890,9 @@ namespace TerVerApp
             // 
             this.button3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.button3.Enabled = false;
-            this.button3.Location = new System.Drawing.Point(4, 63);
-            this.button3.Margin = new System.Windows.Forms.Padding(4);
+            this.button3.Location = new System.Drawing.Point(3, 51);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(109, 52);
+            this.button3.Size = new System.Drawing.Size(82, 43);
             this.button3.TabIndex = 5;
             this.button3.Text = "Ширина столбца";
             this.button3.UseVisualStyleBackColor = true;
@@ -1008,10 +901,9 @@ namespace TerVerApp
             // 
             this.button4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.button4.Enabled = false;
-            this.button4.Location = new System.Drawing.Point(4, 4);
-            this.button4.Margin = new System.Windows.Forms.Padding(4);
+            this.button4.Location = new System.Drawing.Point(3, 3);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(109, 51);
+            this.button4.Size = new System.Drawing.Size(82, 42);
             this.button4.TabIndex = 3;
             this.button4.Text = "Количество столбцов";
             this.button4.UseVisualStyleBackColor = true;
@@ -1020,24 +912,23 @@ namespace TerVerApp
             // 
             this.tbxH.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tbxH.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.tbxH.Location = new System.Drawing.Point(121, 4);
-            this.tbxH.Margin = new System.Windows.Forms.Padding(4);
+            this.tbxH.Location = new System.Drawing.Point(91, 3);
             this.tbxH.Multiline = true;
             this.tbxH.Name = "tbxH";
             this.tbxH.ReadOnly = true;
-            this.tbxH.Size = new System.Drawing.Size(188, 51);
+            this.tbxH.Size = new System.Drawing.Size(141, 42);
             this.tbxH.TabIndex = 4;
             this.tbxH.TabStop = false;
             // 
             // Form1
             // 
             this.AcceptButton = this.btnCalc;
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
-            this.ClientSize = new System.Drawing.Size(1882, 641);
-            this.Controls.Add(this.groupBox4);
+            this.ClientSize = new System.Drawing.Size(1413, 521);
             this.Controls.Add(this.tableGist);
+            this.Controls.Add(this.groupBox4);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.groupBox3);
@@ -1052,9 +943,8 @@ namespace TerVerApp
             this.Controls.Add(this.grpbxMat);
             this.Controls.Add(this.txtbxInput);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(4);
-            this.MaximumSize = new System.Drawing.Size(1900, 783);
-            this.MinimumSize = new System.Drawing.Size(1900, 679);
+            this.MaximumSize = new System.Drawing.Size(1429, 643);
+            this.MinimumSize = new System.Drawing.Size(1429, 559);
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Изи ТерВер сдал!";

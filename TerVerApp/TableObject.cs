@@ -12,24 +12,18 @@ namespace TerVerApp
         public int CountColumn { get; private set; } = 4;
         public double Delt { get; private set; }
 
+        /// <summary>Создать и заполнить таблицу</summary>
+        /// <param name="varSeq">Вариационный ряд</param>
+        /// <returns>Таблица</returns>
         public TableClass CreateTable(List<double> varSeq)
         {
             CountRow = Convert.ToInt32(Math.Floor(Math.Log(Convert.ToDouble(varSeq.Count), 2.0))) + 1;
 
-            TableClass Table = new TableClass();
-            Table.Num = new int[CountRow];
-            Table.Inter = new KeyValuePair<double, double>[CountRow];
-            Table.Chast = new int[CountRow];
-            Table.Hight = new double[CountRow];
-
-            //TableClass[] Table = {   new int[CountRow],
-            //                     new KeyValuePair<double, double>[CountRow], 
-            //                     new int[CountRow], 
-            //                     new double[CountRow] };
+            TableClass Table = new TableClass(CountRow);
 
             Delt = (varSeq[varSeq.Count - 1] - varSeq[0]) / CountRow;
 
-            Table.Inter[0] = new KeyValuePair<double, double>(varSeq[0], varSeq[0] + Delt);
+            Table.Inter[0] = new KeyValuePair<double, double>(Math.Round(varSeq[0],6), Math.Round(varSeq[0] + Delt,4));
 
             int temp = 0, j;
 
@@ -40,16 +34,16 @@ namespace TerVerApp
                 if(i != 0)
                 {
                     Table.Inter[i] = new KeyValuePair<double, double>( 
-                                    ((KeyValuePair<double, double>)Table.Inter[i-1]).Value, 
-                                    ((KeyValuePair<double, double>)Table.Inter[i - 1]).Value + Delt);
+                                    Math.Round((Table.Inter[i-1]).Value,4),
+                                    Math.Round((Table.Inter[i - 1]).Value + Delt,4));
                 }
 
-                for (j = temp; j < varSeq.Count && varSeq[j] < ((KeyValuePair<double, double>)Table.Inter[i]).Value; j++);
+                for (j = temp; j < varSeq.Count && varSeq[j] < (Table.Inter[i]).Value; j++);
                 Table.Chast[i] = j - temp;
                 if (i == CountRow - 1) Table.Chast[i]++;
                 temp = j;
 
-                Table.Hight[i] = Convert.ToDouble(Table.Chast[i]) / Delt / varSeq.Count;
+                Table.Hight[i] = Math.Round(Convert.ToDouble(Table.Chast[i]) / Delt / varSeq.Count, 4);
             }
 
             return Table;
