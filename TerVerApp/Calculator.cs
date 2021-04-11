@@ -22,7 +22,7 @@ namespace TerVerApp
             {
                 sum += Math.Pow(num, n);
             }
-            return (sum/Sequence.Count).ToString();
+            return Math.Round((sum/Sequence.Count),6).ToString();
         }
         
         public string vN (int n)
@@ -33,7 +33,7 @@ namespace TerVerApp
             {
                 sum += Math.Pow(num - m1, n);
             }
-            return (sum/Sequence.Count).ToString();
+            return Math.Round((sum/Sequence.Count),6).ToString();
         }
 
         public string Sx()
@@ -44,7 +44,7 @@ namespace TerVerApp
             {
                 sum += Math.Pow(num - m1, 2);
             }
-            return (sum/(Sequence.Count-1)).ToString();
+            return Math.Round((sum/(Sequence.Count-1)),6).ToString();
         }
 
         public string XMod()
@@ -66,12 +66,12 @@ namespace TerVerApp
 
         public string Kas()
         {
-            return (double.Parse(vN(3)) / Math.Pow(Math.Sqrt(double.Parse(vN(2))),3)).ToString();
+            return Math.Round((double.Parse(vN(3)) / Math.Pow(Math.Sqrt(double.Parse(vN(2))),3)),6).ToString();
         }
 
         public string Kex()
         {
-            return (double.Parse(vN(4)) / Math.Pow(Math.Sqrt(double.Parse(vN(2))), 4) - 3).ToString();
+            return Math.Round((double.Parse(vN(4)) / Math.Pow(Math.Sqrt(double.Parse(vN(2))), 4) - 3),6).ToString();
         }
     }
 }
