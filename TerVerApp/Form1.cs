@@ -22,6 +22,7 @@ namespace TerVerApp
             try
             {
                 string s = txtbxInput.Text;
+                s = s.Replace("−", "-");
                 List<double> input = s.Split(new char[] { ' ' }, StringSplitOptions.RemoveEmptyEntries).Select(double.Parse).ToList();
                 if (flag)
                 {
@@ -137,19 +138,34 @@ namespace TerVerApp
             txtbxVarSeq.Text = string.Join(" ", seq.ToArray());
 
             TableObject tableObject = new TableObject();
-            object[,] table = tableObject.CreateTable(seq);
+            TableClass table = tableObject.CreateTable(seq);
             tableGist.ColumnCount = tableObject.CountColumn;
             tableGist.RowCount = tableObject.CountRow + 1;
 
-            for (int i = 0; i < tableObject.CountColumn; i++)
+            tbxH.Text = (tableObject.CountRow).ToString();
+            tbxS.Text = (tableObject.Delt).ToString();
+
+
+            for (int j = 0; j < tableObject.CountRow; j++)
             {
-                for (int j = 0; j < tableObject.CountRow; j++)
-                {
-                    Label label = new Label();
-                    label.Text = table[i, j].ToString();
-                    tableGist.Controls.Add(label, i, j + 1);
-                }
+                Label label1 = new Label();
+                Label label2 = new Label();
+                Label label3 = new Label();
+                Label label4 = new Label();
+
+                label1.Text = table.Num[j].ToString();
+                tableGist.Controls.Add(label1, 0, j + 1);
+
+                label2.Text = table.Inter[j].ToString();
+                tableGist.Controls.Add(label2, 1, j + 1);
+
+                label3.Text = table.Chast[j].ToString();
+                tableGist.Controls.Add(label3, 2, j + 1);
+
+                label4.Text = table.Hight[j].ToString();
+                tableGist.Controls.Add(label4, 3, j + 1);
             }
+           
         }
     }
 }

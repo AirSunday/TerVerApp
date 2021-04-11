@@ -10,38 +10,46 @@ namespace TerVerApp
     {
         public int CountRow { get; private set; }
         public int CountColumn { get; private set; } = 4;
+        public double Delt { get; private set; }
 
-        public object[,] CreateTable(List<double> varSeq)
+        public TableClass CreateTable(List<double> varSeq)
         {
-            CountRow = Convert.ToInt32(Math.Log(Convert.ToDouble(varSeq.Count), 2.0)) + 1;
+            CountRow = Convert.ToInt32(Math.Floor(Math.Log(Convert.ToDouble(varSeq.Count), 2.0))) + 1;
 
-            object[,] Table = { { new int[CountRow] },
-                                { new KeyValuePair<double, double>[CountRow] }, 
-                                { new int[CountRow] }, 
-                                { new double[CountRow] } };
+            TableClass Table = new TableClass();
+            Table.Num = new int[CountRow];
+            Table.Inter = new KeyValuePair<double, double>[CountRow];
+            Table.Chast = new int[CountRow];
+            Table.Hight = new double[CountRow];
 
-            double delt = (varSeq[varSeq.Count - 1] - varSeq[0]) / CountRow;
+            //TableClass[] Table = {   new int[CountRow],
+            //                     new KeyValuePair<double, double>[CountRow], 
+            //                     new int[CountRow], 
+            //                     new double[CountRow] };
 
-            Table[1, 0] = new KeyValuePair<double, double>(varSeq[0], varSeq[0] + delt);
+            Delt = (varSeq[varSeq.Count - 1] - varSeq[0]) / CountRow;
+
+            Table.Inter[0] = new KeyValuePair<double, double>(varSeq[0], varSeq[0] + Delt);
 
             int temp = 0, j;
 
             for (int i = 0; i < CountRow; i++)
             {
-                Table[0, i] = (i + 1);
+                Table.Num[i] = (i + 1);
 
                 if(i != 0)
                 {
-                    Table[1, i] = new KeyValuePair<double, double>( 
-                                    ((KeyValuePair<double, double>)Table[1,i-1]).Value, 
-                                    ((KeyValuePair<double, double>)Table[1, i - 1]).Value + delt);
+                    Table.Inter[i] = new KeyValuePair<double, double>( 
+                                    ((KeyValuePair<double, double>)Table.Inter[i-1]).Value, 
+                                    ((KeyValuePair<double, double>)Table.Inter[i - 1]).Value + Delt);
                 }
 
-                for (j = temp; varSeq[j] < ((KeyValuePair<double, double>)Table[1, i]).Value; j++);
-                Table[2, i] = j - temp + 1;
+                for (j = temp; j < varSeq.Count && varSeq[j] < ((KeyValuePair<double, double>)Table.Inter[i]).Value; j++);
+                Table.Chast[i] = j - temp;
+                if (i == CountRow - 1) Table.Chast[i]++;
                 temp = j;
 
-                Table[3, i] = Convert.ToDouble(Table[2, i]) / delt / varSeq.Count;
+                Table.Hight[i] = Convert.ToDouble(Table.Chast[i]) / Delt / varSeq.Count;
             }
 
             return Table;
