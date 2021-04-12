@@ -188,7 +188,10 @@ namespace TerVerApp
                 label1.Text = table.Num[j-1].ToString();
                 tableGist.Controls.Add(label1, 0, j);
 
-                label2.Text = "[ " + table.Inter[j-1].Key.ToString() + " ; " + table.Inter[j-1].Value.ToString() + " ]";
+                if(j != tableObject.CountRow)
+                    label2.Text = "[ " + table.Inter[j-1].Key.ToString() + " ; " + table.Inter[j-1].Value.ToString() + " )";
+                else
+                    label2.Text = "[ " + table.Inter[j-1].Key.ToString() + " ; " + table.Inter[j-1].Value.ToString() + " ]";
                 tableGist.Controls.Add(label2, 1, j);
 
                 label3.Text = table.Chast[j-1].ToString();
