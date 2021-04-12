@@ -1,11 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace TerVerApp
@@ -18,19 +14,17 @@ namespace TerVerApp
             
         }
 
-        public List<double> ParseStandart(bool flag = true)
+        private List<double> ParseStandart(bool flag = true)
         {
             try
             {
-                string s = txtbxInput.Text;
+                var s = txtbxInput.Text;
                 s = s.Replace("−", "-");
-                List<double> input = s.Split(new char[] { ' ' }, StringSplitOptions.RemoveEmptyEntries).Select(double.Parse).ToList();
-                if (flag)
-                {
-                    lblStatus.Text = "Статус: Ооо, повезло, повезло!";
-                    lblStatus.ForeColor = Color.Green;
-                    txtbxInput.Focus();
-                }
+                var input = s.Split(new[] { ' ' }, StringSplitOptions.RemoveEmptyEntries).Select(double.Parse).ToList();
+                if (!flag) return input;
+                lblStatus.Text = "Статус: Ооо, повезло, повезло!";
+                lblStatus.ForeColor = Color.Green;
+                txtbxInput.Focus();
                 return input;
             }
             catch
@@ -51,26 +45,25 @@ namespace TerVerApp
             }
         }
 
-        public List<double> ParseManyN(bool flag = true)
+        private List<double> ParseManyN(bool flag = true)
         {
             try { 
-                string s = txtbxInput.Text;
-                List<double> input = new List<double>();
-                List<string> str = s.Split(new char[] { ' ' }, StringSplitOptions.RemoveEmptyEntries).ToList();
+                var s = txtbxInput.Text;
+                var input = new List<double>();
+                var str = s.Split(new[] { ' ' }, StringSplitOptions.RemoveEmptyEntries).ToList();
                 foreach (var word in str)
                 {
-                    List<double> str2 = word.Split(new char[] { ':' }).Select(double.Parse).ToList();
-                    for(int i = 0; i < str2[1]; i++)
+                    var str2 = word.Split(new[] { ':' }).Select(double.Parse).ToList();
+                    for(var i = 0; i < str2[1]; i++)
                     {
                         input.Add(str2[0]);
                     }
                 }
-                if (flag)
-                {
-                    lblStatus.Text = "Статус: Ооо, повезло, повезло!";
-                    lblStatus.ForeColor = Color.Green;
-                    txtbxInput.Focus();
-                }
+
+                if (!flag) return input;
+                lblStatus.Text = "Статус: Ооо, повезло, повезло!";
+                lblStatus.ForeColor = Color.Green;
+                txtbxInput.Focus();
                 return input;
             }
             catch
@@ -102,12 +95,8 @@ namespace TerVerApp
                 txtbxInput.Focus();
                 return;
             }
-                
-            Calculator calc;
-            if (rbStandart.Checked)
-                calc = new Calculator(ParseStandart());
-            else
-                calc = new Calculator(ParseManyN());
+
+            var calc = rbStandart.Checked ? new Calculator(ParseStandart()) : new Calculator(ParseManyN());
 
             if (calc.Sequence == null)
                 return;
@@ -140,20 +129,20 @@ namespace TerVerApp
             seq.Sort();
             txtbxVarSeq.Text = string.Join(" ", seq.ToArray());
 
-            TableObject tableObject = new TableObject();
-            TableClass table = tableObject.CreateTable(seq);
+            var tableObject = new TableObject();
+            var table = tableObject.CreateTable(seq);
             tableGist.ColumnCount = tableObject.CountColumn;
             tableGist.RowCount = tableObject.CountRow + 1;
 
             tbxH.Text = (tableObject.CountRow).ToString();
             tbxS.Text = (tableObject.Delt).ToString();
 
-            for (int j = 0; j <= tableObject.CountRow; j++)
+            for (var j = 0; j <= tableObject.CountRow; j++)
             {
-                Label label1 = new Label();
-                Label label2 = new Label();
-                Label label3 = new Label();
-                Label label4 = new Label();
+                var label1 = new Label();
+                var label2 = new Label();
+                var label3 = new Label();
+                var label4 = new Label();
                 label1.AutoSize = false;
                 label2.AutoSize = false;
                 label3.AutoSize = false;

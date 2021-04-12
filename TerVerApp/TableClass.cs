@@ -1,17 +1,13 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
 
 namespace TerVerApp
 {
-    class TableClass
+    internal class TableClass
     {
-        public int[] Num { get; set; }
-        public KeyValuePair<double, double>[] Inter { get; set; }
-        public int[] Chast { get; set; }
-        public double[] Hight { get; set; }
+        public int[] Num { get; }
+        public KeyValuePair<double, double>[] Inter { get; }
+        public int[] Chast { get; }
+        public double[] Hight { get; }
 
         /// <summary>Конструктор создающий пустые массивы</summary>
         /// <param name="countRow">Размерность массивов</param>

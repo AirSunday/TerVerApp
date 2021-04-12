@@ -1,14 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace TerVerApp
 {
-    class Calculator
+    internal class Calculator
     {
-        public List<double> Sequence { get; set; }
+        public List<double> Sequence { get; }
 
         public Calculator(List<double> sequence)
         {
@@ -17,33 +15,21 @@ namespace TerVerApp
 
         public string mN (int n)
         {
-            double sum = 0;
-            foreach (var num in Sequence)
-            {
-                sum += Math.Pow(num, n);
-            }
+            var sum = Sequence.Sum(num => Math.Pow(num, n));
             return Math.Round((sum/Sequence.Count),6).ToString();
         }
         
         public string vN (int n)
         {
-            double sum = 0;
-            double m1 = double.Parse(mN(1));
-            foreach (var num in Sequence)
-            {
-                sum += Math.Pow(num - m1, n);
-            }
+            var m1 = double.Parse(mN(1));
+            var sum = Sequence.Sum(num => Math.Pow(num - m1, n));
             return Math.Round((sum/Sequence.Count),6).ToString();
         }
 
         public string Sx()
         {
-            double sum = 0;
-            double m1 = double.Parse(mN(1));
-            foreach (var num in Sequence)
-            {
-                sum += Math.Pow(num - m1, 2);
-            }
+            var m1 = double.Parse(mN(1));
+            var sum = Sequence.Sum(num => Math.Pow(num - m1, 2));
             return Math.Round((sum/(Sequence.Count-1)),6).ToString();
         }
 
@@ -54,14 +40,9 @@ namespace TerVerApp
 
         public string XMed()
         {
-            List<double> seq = Sequence;
+            var seq = Sequence;
             seq.Sort();
-            if (seq.Count % 2 == 1)
-                return seq[seq.Count / 2].ToString();
-            else
-            {
-                return ((seq[seq.Count / 2] + seq[seq.Count / 2 - 1]) / 2).ToString();
-            }
+            return seq.Count % 2 == 1 ? seq[seq.Count / 2].ToString() : ((seq[seq.Count / 2] + seq[seq.Count / 2 - 1]) / 2).ToString();
         }
 
         public string Kas()

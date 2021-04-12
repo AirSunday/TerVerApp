@@ -1,15 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace TerVerApp
 {
-    class TableObject
+    internal class TableObject
     {
         public int CountRow { get; private set; }
-        public int CountColumn { get; private set; } = 4;
+        public int CountColumn { get; } = 4;
         public double Delt { get; private set; }
 
         /// <summary>Создать и заполнить таблицу</summary>
@@ -19,7 +16,7 @@ namespace TerVerApp
         {
             CountRow = Convert.ToInt32(Math.Floor(Math.Log(Convert.ToDouble(varSeq.Count), 2.0))) + 1;
 
-            TableClass Table = new TableClass(CountRow);
+            var Table = new TableClass(CountRow);
 
             Delt = (varSeq[varSeq.Count - 1] - varSeq[0]) / CountRow;
 
@@ -27,7 +24,7 @@ namespace TerVerApp
 
             int temp = 0, j;
 
-            for (int i = 0; i < CountRow; i++)
+            for (var i = 0; i < CountRow; i++)
             {
                 Table.Num[i] = (i + 1);
 
@@ -39,6 +36,7 @@ namespace TerVerApp
                 }
 
                 for (j = temp; j < varSeq.Count && varSeq[j] < (Table.Inter[i]).Value; j++);
+
                 Table.Chast[i] = j - temp;
                 if (i == CountRow - 1) Table.Chast[i]++;
                 temp = j;
