@@ -129,8 +129,27 @@ namespace TerVerApp
             seq.Sort();
             txtbxVarSeq.Text = string.Join(" ", seq.ToArray());
 
+            CreateTable(seq);
+        }
+
+        private void btnReCalc_Click(object sender, EventArgs e)
+        {
+            tableGist.Visible = false;
+            tableGist.Controls.Clear();
+
+            int.TryParse(tbxH.Text, out var countRow);
+
+            var seq = txtbxVarSeq.Text.Split(' ').Select(double.Parse).ToList();
+
+            CreateTable(seq, countRow);
+
+        }
+
+        private void CreateTable(List<double> seq, int countRow = 0)
+        {
+            // Таблица
             var tableObject = new TableObject();
-            var table = tableObject.CreateTable(seq);
+            var table = tableObject.CreateTable(seq, countRow);
             tableGist.ColumnCount = tableObject.CountColumn;
             tableGist.RowCount = tableObject.CountRow + 1;
 
@@ -174,19 +193,19 @@ namespace TerVerApp
                     continue;
                 }
 
-                label1.Text = table.Num[j-1].ToString();
+                label1.Text = table.Num[j - 1].ToString();
                 tableGist.Controls.Add(label1, 0, j);
 
-                if(j != tableObject.CountRow)
-                    label2.Text = "[ " + table.Inter[j-1].Key.ToString() + " ; " + table.Inter[j-1].Value.ToString() + " )";
+                if (j != tableObject.CountRow)
+                    label2.Text = "[ " + table.Inter[j - 1].Key.ToString() + " ; " + table.Inter[j - 1].Value.ToString() + " )";
                 else
-                    label2.Text = "[ " + table.Inter[j-1].Key.ToString() + " ; " + table.Inter[j-1].Value.ToString() + " ]";
+                    label2.Text = "[ " + table.Inter[j - 1].Key.ToString() + " ; " + table.Inter[j - 1].Value.ToString() + " ]";
                 tableGist.Controls.Add(label2, 1, j);
 
-                label3.Text = table.Chast[j-1].ToString();
+                label3.Text = table.Chast[j - 1].ToString();
                 tableGist.Controls.Add(label3, 2, j);
 
-                label4.Text = table.Hight[j-1].ToString();
+                label4.Text = table.Hight[j - 1].ToString();
                 tableGist.Controls.Add(label4, 3, j);
             }
             tableGist.Visible = true;

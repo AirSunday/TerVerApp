@@ -94,6 +94,7 @@ namespace TerVerApp
             this.button3 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.tbxH = new System.Windows.Forms.TextBox();
+            this.btnReCalc = new System.Windows.Forms.Button();
             this.grpbxMat.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbMat)).BeginInit();
             this.tableLayoutPanel1.SuspendLayout();
@@ -793,8 +794,8 @@ namespace TerVerApp
             this.tableGist.MaximumSize = new System.Drawing.Size(439, 1000);
             this.tableGist.Name = "tableGist";
             this.tableGist.RowCount = 1;
-            this.tableGist.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 61F));
-            this.tableGist.Size = new System.Drawing.Size(439, 63);
+            this.tableGist.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 62F));
+            this.tableGist.Size = new System.Drawing.Size(439, 64);
             this.tableGist.TabIndex = 16;
             this.tableGist.Visible = false;
             // 
@@ -805,7 +806,7 @@ namespace TerVerApp
             this.label5.Location = new System.Drawing.Point(3, 1);
             this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(36, 61);
+            this.label5.Size = new System.Drawing.Size(36, 62);
             this.label5.TabIndex = 0;
             this.label5.Text = "№";
             this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -817,7 +818,7 @@ namespace TerVerApp
             this.label6.Location = new System.Drawing.Point(44, 1);
             this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(163, 61);
+            this.label6.Size = new System.Drawing.Size(163, 62);
             this.label6.TabIndex = 1;
             this.label6.Text = "Интервал";
             this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -829,7 +830,7 @@ namespace TerVerApp
             this.label7.Location = new System.Drawing.Point(212, 1);
             this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(56, 61);
+            this.label7.Size = new System.Drawing.Size(56, 62);
             this.label7.TabIndex = 2;
             this.label7.Text = "Частота";
             this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -841,13 +842,14 @@ namespace TerVerApp
             this.label8.Location = new System.Drawing.Point(273, 1);
             this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(163, 61);
+            this.label8.Size = new System.Drawing.Size(163, 62);
             this.label8.TabIndex = 3;
             this.label8.Text = "Высота столбца";
             this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // groupBox4
             // 
+            this.groupBox4.Controls.Add(this.btnReCalc);
             this.groupBox4.Controls.Add(this.tableLayoutPanel7);
             this.groupBox4.Location = new System.Drawing.Point(975, 15);
             this.groupBox4.Name = "groupBox4";
@@ -910,15 +912,25 @@ namespace TerVerApp
             // 
             // tbxH
             // 
+            this.tbxH.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.tbxH.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tbxH.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.tbxH.Location = new System.Drawing.Point(91, 3);
             this.tbxH.Multiline = true;
             this.tbxH.Name = "tbxH";
-            this.tbxH.ReadOnly = true;
             this.tbxH.Size = new System.Drawing.Size(141, 42);
             this.tbxH.TabIndex = 4;
             this.tbxH.TabStop = false;
+            // 
+            // btnReCalc
+            // 
+            this.btnReCalc.Location = new System.Drawing.Point(247, 19);
+            this.btnReCalc.Name = "btnReCalc";
+            this.btnReCalc.Size = new System.Drawing.Size(75, 48);
+            this.btnReCalc.TabIndex = 17;
+            this.btnReCalc.Text = "ReCalculate";
+            this.btnReCalc.UseVisualStyleBackColor = true;
+            this.btnReCalc.Click += new System.EventHandler(this.btnReCalc_Click);
             // 
             // Form1
             // 
@@ -1047,6 +1059,7 @@ namespace TerVerApp
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.TextBox tbxH;
+        private System.Windows.Forms.Button btnReCalc;
     }
 }
 
