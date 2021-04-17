@@ -38,18 +38,13 @@ namespace TerVerApp
 
                 if (i != 0)
                 {
-                    if (i == CountRow - 1)
-                    {
-                        Table.Inter[i] = new KeyValuePair<double, double>(
-                            Math.Round(Table.Inter[i - 1].Value, 4),
-                            Math.Round(varSeq.LastOrDefault(), 4));
-                    }
-                    else
-                    {
-                        Table.Inter[i] = new KeyValuePair<double, double>(
-                            Math.Round(Table.Inter[i - 1].Value, 4),
-                            Math.Round(Table.Inter[i - 1].Value + Delt, 4));
-                    }
+                    var inter1 = Math.Round(Table.Inter[i - 1].Value, 4);
+                    var inter2 = Math.Round(Table.Inter[i - 1].Value + Delt, 4);
+                    if (inter2 - Math.Truncate(inter2) >= 0.9990)
+                        inter2 = inter2 >= 0
+                            ? Math.Ceiling(inter2)
+                            : Math.Floor(inter2);
+                    Table.Inter[i] = new KeyValuePair<double, double>(inter1,inter2);
                 }
 
                 for (j = temp; j < varSeq.Count && varSeq[j] <= (Table.Inter[i]).Value; j++) ;
