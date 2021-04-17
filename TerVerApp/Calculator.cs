@@ -13,46 +13,46 @@ namespace TerVerApp
             Sequence = sequence;
         }
 
-        public string mN (int n)
+        public double mN (int n)
         {
             var sum = Sequence.Sum(num => Math.Pow(num, n));
-            return Math.Round((sum/Sequence.Count),6).ToString();
+            return sum/Sequence.Count;
         }
         
-        public string vN (int n)
+        public double vN (int n)
         {
-            var m1 = double.Parse(mN(1));
+            var m1 = mN(1);
             var sum = Sequence.Sum(num => Math.Pow(num - m1, n));
-            return Math.Round((sum/Sequence.Count),6).ToString();
+            return sum/Sequence.Count;
         }
 
-        public string Sx()
+        public double Sx()
         {
-            var m1 = double.Parse(mN(1));
+            var m1 = mN(1);
             var sum = Sequence.Sum(num => Math.Pow(num - m1, 2));
-            return Math.Round((sum/(Sequence.Count-1)),6).ToString();
+            return sum/(Sequence.Count-1);
         }
 
-        public string XMod()
+        public double XMod()
         {
-            return Sequence.GroupBy(x => x).OrderByDescending(x => x.Count()).First().Key.ToString();
+            return Sequence.GroupBy(x => x).OrderByDescending(x => x.Count()).First().Key;
         }
 
-        public string XMed()
+        public double XMed()
         {
             var seq = Sequence;
             seq.Sort();
-            return seq.Count % 2 == 1 ? seq[seq.Count / 2].ToString() : ((seq[seq.Count / 2] + seq[seq.Count / 2 - 1]) / 2).ToString();
+            return seq.Count % 2 == 1 ? seq[seq.Count / 2] : ((seq[seq.Count / 2] + seq[seq.Count / 2 - 1]) / 2);
         }
 
-        public string Kas()
+        public double Kas()
         {
-            return Math.Round((double.Parse(vN(3)) / Math.Pow(Math.Sqrt(double.Parse(vN(2))),3)),6).ToString();
+            return vN(3) / Math.Pow(Math.Sqrt(vN(2)), 3);
         }
 
-        public string Kex()
+        public double Kex()
         {
-            return Math.Round((double.Parse(vN(4)) / Math.Pow(Math.Sqrt(double.Parse(vN(2))), 4) - 3),6).ToString();
+            return (vN(4) / Math.Pow(Math.Sqrt(vN(2)), 4) - 3);
         }
     }
 }

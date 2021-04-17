@@ -102,27 +102,27 @@ namespace TerVerApp
                 return;
 
             // Выборочный начальный момент n-ого порядка
-            txtbxM1.Text = calc.mN(1);
-            txtbxM2.Text = calc.mN(2);
-            txtbxM3.Text = calc.mN(3);
-            txtbxM4.Text = calc.mN(4);
+            txtbxM1.Text = calc.mN(1).ToString("0.####");
+            txtbxM2.Text = calc.mN(2).ToString("0.####");
+            txtbxM3.Text = calc.mN(3).ToString("0.####");
+            txtbxM4.Text = calc.mN(4).ToString("0.####");
 
             // Выборочный центральный момент n-ого порядка
-            txtbxV2.Text = calc.vN(2);
-            txtbxV3.Text = calc.vN(3);
-            txtbxV4.Text = calc.vN(4);
-            txtbxV5.Text = calc.vN(5);
+            txtbxV2.Text = calc.vN(2).ToString("0.####");
+            txtbxV3.Text = calc.vN(3).ToString("0.####");
+            txtbxV4.Text = calc.vN(4).ToString("0.####");
+            txtbxV5.Text = calc.vN(5).ToString("0.####");
 
             // Оценка Дисперсии
-            txtbxSx.Text = calc.Sx();
+            txtbxSx.Text = calc.Sx().ToString("0.####");
 
             // Мода и Медиана
-            txtbxMed.Text = calc.XMed();
-            txtbxMod.Text = calc.XMod();
+            txtbxMed.Text = calc.XMed().ToString("0.####");
+            txtbxMod.Text = calc.XMod().ToString("0.####");
 
             // Коэф. Ас. и Екс.
-            txtbxKas.Text = calc.Kas();
-            txtbxKex.Text = calc.Kex();
+            txtbxKas.Text = calc.Kas().ToString("0.####");
+            txtbxKex.Text = calc.Kex().ToString("0.####");
 
             // Вариационный ряд
             var seq = calc.Sequence;
