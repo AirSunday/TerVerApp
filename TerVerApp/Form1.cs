@@ -150,11 +150,11 @@ namespace TerVerApp
             // Таблица
             var tableObject = new TableObject();
             var table = tableObject.CreateTable(seq, countRow);
-            tableGist.ColumnCount = tableObject.CountColumn;
+            tableGist.ColumnCount = tableObject.countColumn;
             tableGist.RowCount = tableObject.CountRow + 1;
 
             tbxH.Text = (tableObject.CountRow).ToString();
-            tbxS.Text = (tableObject.Delt).ToString();
+            tbxS.Text = (tableObject.Delta).ToString("0.####");
 
             for (var j = 0; j <= tableObject.CountRow; j++)
             {
@@ -197,15 +197,15 @@ namespace TerVerApp
                 tableGist.Controls.Add(label1, 0, j);
 
                 if (j != tableObject.CountRow)
-                    label2.Text = "[ " + table.Inter[j - 1].Key.ToString() + " ; " + table.Inter[j - 1].Value.ToString() + " )";
+                    label2.Text = "[ " + table.Inter[j - 1].Key.ToString("0.####") + " ; " + table.Inter[j - 1].Value.ToString("0.####") + " )";
                 else
-                    label2.Text = "[ " + table.Inter[j - 1].Key.ToString() + " ; " + table.Inter[j - 1].Value.ToString() + " ]";
+                    label2.Text = "[ " + table.Inter[j - 1].Key.ToString("0.####") + " ; " + table.Inter[j - 1].Value.ToString("0.####") + " ]";
                 tableGist.Controls.Add(label2, 1, j);
 
-                label3.Text = table.Chast[j - 1].ToString();
+                label3.Text = table.Chast[j - 1].ToString("0.####");
                 tableGist.Controls.Add(label3, 2, j);
 
-                label4.Text = table.Hight[j - 1].ToString();
+                label4.Text = table.Hight[j - 1].ToString("0.####");
                 tableGist.Controls.Add(label4, 3, j);
             }
             tableGist.Visible = true;

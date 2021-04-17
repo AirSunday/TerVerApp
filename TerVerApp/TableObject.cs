@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 
 namespace TerVerApp
@@ -7,8 +8,8 @@ namespace TerVerApp
     internal class TableObject
     {
         public int CountRow { get; private set; }
-        public int CountColumn { get; } = 4;
-        public double Delt { get; private set; }
+        public int countColumn = 4;
+        public double Delta { get; private set; }
 
         /// <summary>Создать и заполнить таблицу</summary>
         /// <param name="varSeq">Вариационный ряд</param>
@@ -26,33 +27,62 @@ namespace TerVerApp
             }
             var Table = new TableClass(CountRow);
 
-            Delt = Math.Round((varSeq[varSeq.Count - 1] - varSeq[0]) / CountRow, 4);
+            Delta = (varSeq[varSeq.Count - 1] - varSeq[0]) / CountRow;
 
-            Table.Inter[0] = new KeyValuePair<double, double>(Math.Round(varSeq[0], 6), Math.Round(varSeq[0] + Delt, 4));
+            using (null)
+            {
+                var inter1 = varSeq[0];
+                var inter2 = varSeq[0] + Delta;
+                if (inter2 - Math.Truncate(inter2) >= 0.9999999999000000)
+                {
+                    inter2 = inter2 >= 0
+                        ? Math.Ceiling(inter2)
+                        : Math.Floor(inter2);
+                }
+                Table.Inter[0] = new KeyValuePair<double, double>(inter1, inter2);
+            }
 
-            int temp = 0, j;
-
+            var j = 0;
             for (var i = 0; i < CountRow; i++)
             {
                 Table.Num[i] = (i + 1);
-
+                var inter1 = Table.Inter[0].Key; 
+                var inter2 = Table.Inter[0].Value;
                 if (i != 0)
                 {
-                    var inter1 = Math.Round(Table.Inter[i - 1].Value, 4);
-                    var inter2 = Math.Round(Table.Inter[i - 1].Value + Delt, 4);
-                    if (inter2 - Math.Truncate(inter2) >= 0.9990)
+                    inter1 = Table.Inter[i - 1].Value;
+                    inter2 = Table.Inter[i - 1].Value + Delta;
+                    if (inter2 - Math.Truncate(inter2) >= 0.9999999999000000)
+                    {
                         inter2 = inter2 >= 0
                             ? Math.Ceiling(inter2)
                             : Math.Floor(inter2);
-                    Table.Inter[i] = new KeyValuePair<double, double>(inter1,inter2);
+                    }
+
+                    Table.Inter[i] = new KeyValuePair<double, double>(inter1, inter2);
                 }
 
-                for (j = temp; j < varSeq.Count && varSeq[j] <= (Table.Inter[i]).Value; j++) ;
+                var temp = 0;
+                for (; j < varSeq.Count; j++)
+                {
+                    if (i != CountRow - 1)
+                    {
+                        if (varSeq[j] >= inter1 && varSeq[j] < inter2)
+                            temp++;
+                        else
+                            break;
+                    }
+                    else
+                    {
+                        if (varSeq[j] >= inter1 && varSeq[j] <= inter2)
+                            temp++;
+                        else
+                            break;
+                    }
+                }
+                Table.Chast[i] = temp;
 
-                Table.Chast[i] = j - temp;
-                temp = j;
-
-                Table.Hight[i] = Math.Round(Convert.ToDouble(Table.Chast[i]) / Delt / varSeq.Count, 4);
+                Table.Hight[i] = Convert.ToDouble(Table.Chast[i]) / Delta / varSeq.Count;
             }
 
             return Table;
