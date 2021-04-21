@@ -210,5 +210,21 @@ namespace TerVerApp
             }
             tableGist.Visible = true;
         }
+
+        private void btnHelp_Click(object sender, EventArgs e)
+        {
+            var formHelp = (FormHelp)Application.OpenForms["Form3"] ?? new FormHelp();
+            formHelp.Show();
+        }
+
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            System.Diagnostics.Process.Start("https://github.com/kain69");
+        }
+
+        private void linkSasha_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            System.Diagnostics.Process.Start("https://github.com/AirSunday");
+        }
     }
 }
