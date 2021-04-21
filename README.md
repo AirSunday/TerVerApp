@@ -19,4 +19,4 @@
 
 <b>Ver 4.0<b>
 
-![image](https://user-images.githubusercontent.com/37839328/115493768-cc789b80-a27d-11eb-9ee5-454c0ed7ce80.png)
+![image](https://user-images.githubusercontent.com/37839328/115493830-e6b27980-a27d-11eb-91f7-59d6477a3584.png)
