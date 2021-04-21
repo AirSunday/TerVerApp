@@ -35,7 +35,6 @@ namespace TerVerApp
             this.rbN = new System.Windows.Forms.RadioButton();
             this.btnM1 = new System.Windows.Forms.Button();
             this.grpbxMat = new System.Windows.Forms.GroupBox();
-            this.pbMat = new System.Windows.Forms.PictureBox();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.txtbxM4 = new System.Windows.Forms.TextBox();
             this.txtbxM3 = new System.Windows.Forms.TextBox();
@@ -45,7 +44,6 @@ namespace TerVerApp
             this.btnM2 = new System.Windows.Forms.Button();
             this.txtbxM1 = new System.Windows.Forms.TextBox();
             this.grpbxDisp = new System.Windows.Forms.GroupBox();
-            this.pbDisp = new System.Windows.Forms.PictureBox();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.txtbxV5 = new System.Windows.Forms.TextBox();
             this.txtbxV4 = new System.Windows.Forms.TextBox();
@@ -56,14 +54,13 @@ namespace TerVerApp
             this.btnV2 = new System.Windows.Forms.Button();
             this.txtbxV2 = new System.Windows.Forms.TextBox();
             this.grpbxSx = new System.Windows.Forms.GroupBox();
-            this.pbSx = new System.Windows.Forms.PictureBox();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.btnSx = new System.Windows.Forms.Button();
             this.txtbxSx = new System.Windows.Forms.TextBox();
             this.btnCalc = new System.Windows.Forms.Button();
             this.grpbxRdBtn = new System.Windows.Forms.GroupBox();
             this.lblStatus = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
+            this.lblMadeBy = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.label2 = new System.Windows.Forms.Label();
             this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
@@ -72,7 +69,6 @@ namespace TerVerApp
             this.btnMod = new System.Windows.Forms.Button();
             this.txtbxMod = new System.Windows.Forms.TextBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
             this.txtbxKex = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
@@ -89,32 +85,39 @@ namespace TerVerApp
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.btnReCalc = new System.Windows.Forms.Button();
             this.tableLayoutPanel7 = new System.Windows.Forms.TableLayoutPanel();
             this.tbxS = new System.Windows.Forms.TextBox();
             this.button3 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.tbxH = new System.Windows.Forms.TextBox();
-            this.btnReCalc = new System.Windows.Forms.Button();
+            this.btnHelp = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pbSx = new System.Windows.Forms.PictureBox();
+            this.pbDisp = new System.Windows.Forms.PictureBox();
+            this.pbMat = new System.Windows.Forms.PictureBox();
+            this.linkVlad = new System.Windows.Forms.LinkLabel();
+            this.linkSasha = new System.Windows.Forms.LinkLabel();
             this.grpbxMat.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbMat)).BeginInit();
             this.tableLayoutPanel1.SuspendLayout();
             this.grpbxDisp.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbDisp)).BeginInit();
             this.tableLayoutPanel2.SuspendLayout();
             this.grpbxSx.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbSx)).BeginInit();
             this.tableLayoutPanel3.SuspendLayout();
             this.grpbxRdBtn.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.tableLayoutPanel4.SuspendLayout();
             this.groupBox2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.tableLayoutPanel5.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.tableLayoutPanel6.SuspendLayout();
             this.tableGist.SuspendLayout();
             this.groupBox4.SuspendLayout();
             this.tableLayoutPanel7.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbSx)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbDisp)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbMat)).BeginInit();
             this.SuspendLayout();
             // 
             // txtbxInput
@@ -168,19 +171,6 @@ namespace TerVerApp
             this.grpbxMat.TabIndex = 5;
             this.grpbxMat.TabStop = false;
             this.grpbxMat.Text = "Выборочный начальный момент n-ого порядка (m1 - оценка мат. ожидания)";
-            // 
-            // pbMat
-            // 
-            this.pbMat.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.pbMat.Image = ((System.Drawing.Image)(resources.GetObject("pbMat.Image")));
-            this.pbMat.InitialImage = null;
-            this.pbMat.Location = new System.Drawing.Point(220, 19);
-            this.pbMat.Name = "pbMat";
-            this.pbMat.Size = new System.Drawing.Size(243, 150);
-            this.pbMat.TabIndex = 1;
-            this.pbMat.TabStop = false;
             // 
             // tableLayoutPanel1
             // 
@@ -299,19 +289,6 @@ namespace TerVerApp
             this.grpbxDisp.TabIndex = 6;
             this.grpbxDisp.TabStop = false;
             this.grpbxDisp.Text = "Выборочный центральный момент n-ого порядка (v2 - дисперсия)";
-            // 
-            // pbDisp
-            // 
-            this.pbDisp.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.pbDisp.Image = global::TerVerApp.Properties.Resources.Без_имени_2;
-            this.pbDisp.InitialImage = null;
-            this.pbDisp.Location = new System.Drawing.Point(220, 19);
-            this.pbDisp.Name = "pbDisp";
-            this.pbDisp.Size = new System.Drawing.Size(243, 150);
-            this.pbDisp.TabIndex = 1;
-            this.pbDisp.TabStop = false;
             // 
             // tableLayoutPanel2
             // 
@@ -442,19 +419,6 @@ namespace TerVerApp
             this.grpbxSx.TabStop = false;
             this.grpbxSx.Text = "Оценка дисперсии";
             // 
-            // pbSx
-            // 
-            this.pbSx.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.pbSx.Image = global::TerVerApp.Properties.Resources.Без_имени_3;
-            this.pbSx.InitialImage = null;
-            this.pbSx.Location = new System.Drawing.Point(220, 19);
-            this.pbSx.Name = "pbSx";
-            this.pbSx.Size = new System.Drawing.Size(243, 42);
-            this.pbSx.TabIndex = 1;
-            this.pbSx.TabStop = false;
-            // 
             // tableLayoutPanel3
             // 
             this.tableLayoutPanel3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -522,24 +486,25 @@ namespace TerVerApp
             | System.Windows.Forms.AnchorStyles.Right)));
             this.lblStatus.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.lblStatus.ForeColor = System.Drawing.Color.Green;
-            this.lblStatus.Location = new System.Drawing.Point(12, 498);
+            this.lblStatus.Location = new System.Drawing.Point(12, 497);
             this.lblStatus.Name = "lblStatus";
             this.lblStatus.Size = new System.Drawing.Size(909, 14);
             this.lblStatus.TabIndex = 10;
             this.lblStatus.Text = "Статус: Хорошо!";
             this.lblStatus.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // label1
+            // lblMadeBy
             // 
-            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            this.lblMadeBy.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.label1.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label1.Location = new System.Drawing.Point(490, 488);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(909, 24);
-            this.label1.TabIndex = 11;
-            this.label1.Text = "Made by Влад Кармазин и Саша Пономарев. Пользуйся, не благодари!";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lblMadeBy.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.lblMadeBy.Location = new System.Drawing.Point(490, 479);
+            this.lblMadeBy.Name = "lblMadeBy";
+            this.lblMadeBy.Size = new System.Drawing.Size(909, 32);
+            this.lblMadeBy.TabIndex = 11;
+            this.lblMadeBy.Text = "  Made by Влад Кармазин и Саша Пономарев. Пользуйся, не благодари! \r\n            " +
+    "                                     С любовью, ФИТ-3!\r\n";
+            this.lblMadeBy.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // groupBox1
             // 
@@ -636,19 +601,6 @@ namespace TerVerApp
             this.groupBox2.TabIndex = 13;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Коэффициент Асимметрии и Эксцесса";
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBox1.Image = global::TerVerApp.Properties.Resources.Без_имени_12;
-            this.pictureBox1.InitialImage = null;
-            this.pictureBox1.Location = new System.Drawing.Point(220, 19);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(243, 157);
-            this.pictureBox1.TabIndex = 1;
-            this.pictureBox1.TabStop = false;
             // 
             // tableLayoutPanel5
             // 
@@ -765,9 +717,9 @@ namespace TerVerApp
             // 
             this.label4.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label4.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label4.Location = new System.Drawing.Point(230, 530);
+            this.label4.Location = new System.Drawing.Point(230, 521);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(947, 24);
+            this.label4.Size = new System.Drawing.Size(947, 33);
             this.label4.TabIndex = 15;
             this.label4.Text = "Разработчики не несут отвественности за неправильное решение. Спасибо, что вы с н" +
     "ами!";
@@ -794,8 +746,8 @@ namespace TerVerApp
             this.tableGist.MaximumSize = new System.Drawing.Size(439, 1000);
             this.tableGist.Name = "tableGist";
             this.tableGist.RowCount = 1;
-            this.tableGist.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 62F));
-            this.tableGist.Size = new System.Drawing.Size(439, 64);
+            this.tableGist.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 64F));
+            this.tableGist.Size = new System.Drawing.Size(439, 66);
             this.tableGist.TabIndex = 16;
             this.tableGist.Visible = false;
             // 
@@ -806,7 +758,7 @@ namespace TerVerApp
             this.label5.Location = new System.Drawing.Point(3, 1);
             this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(36, 62);
+            this.label5.Size = new System.Drawing.Size(36, 64);
             this.label5.TabIndex = 0;
             this.label5.Text = "№";
             this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -818,7 +770,7 @@ namespace TerVerApp
             this.label6.Location = new System.Drawing.Point(44, 1);
             this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(163, 62);
+            this.label6.Size = new System.Drawing.Size(163, 64);
             this.label6.TabIndex = 1;
             this.label6.Text = "Интервал";
             this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -830,7 +782,7 @@ namespace TerVerApp
             this.label7.Location = new System.Drawing.Point(212, 1);
             this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(56, 62);
+            this.label7.Size = new System.Drawing.Size(56, 64);
             this.label7.TabIndex = 2;
             this.label7.Text = "Частота";
             this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -842,7 +794,7 @@ namespace TerVerApp
             this.label8.Location = new System.Drawing.Point(273, 1);
             this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(163, 62);
+            this.label8.Size = new System.Drawing.Size(163, 64);
             this.label8.TabIndex = 3;
             this.label8.Text = "Высота столбца";
             this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -857,6 +809,16 @@ namespace TerVerApp
             this.groupBox4.TabIndex = 14;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Даные для гистограммы";
+            // 
+            // btnReCalc
+            // 
+            this.btnReCalc.Location = new System.Drawing.Point(247, 19);
+            this.btnReCalc.Name = "btnReCalc";
+            this.btnReCalc.Size = new System.Drawing.Size(75, 48);
+            this.btnReCalc.TabIndex = 17;
+            this.btnReCalc.Text = "ReCalculate";
+            this.btnReCalc.UseVisualStyleBackColor = true;
+            this.btnReCalc.Click += new System.EventHandler(this.btnReCalc_Click);
             // 
             // tableLayoutPanel7
             // 
@@ -922,15 +884,99 @@ namespace TerVerApp
             this.tbxH.TabIndex = 4;
             this.tbxH.TabStop = false;
             // 
-            // btnReCalc
+            // btnHelp
             // 
-            this.btnReCalc.Location = new System.Drawing.Point(247, 19);
-            this.btnReCalc.Name = "btnReCalc";
-            this.btnReCalc.Size = new System.Drawing.Size(75, 48);
-            this.btnReCalc.TabIndex = 17;
-            this.btnReCalc.Text = "ReCalculate";
-            this.btnReCalc.UseVisualStyleBackColor = true;
-            this.btnReCalc.Click += new System.EventHandler(this.btnReCalc_Click);
+            this.btnHelp.Location = new System.Drawing.Point(328, 43);
+            this.btnHelp.Name = "btnHelp";
+            this.btnHelp.Size = new System.Drawing.Size(75, 48);
+            this.btnHelp.TabIndex = 17;
+            this.btnHelp.Text = "Help";
+            this.btnHelp.UseVisualStyleBackColor = true;
+            this.btnHelp.Click += new System.EventHandler(this.btnHelp_Click);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.pictureBox1.Image = global::TerVerApp.Properties.Resources.Без_имени_12;
+            this.pictureBox1.InitialImage = null;
+            this.pictureBox1.Location = new System.Drawing.Point(220, 19);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(243, 157);
+            this.pictureBox1.TabIndex = 1;
+            this.pictureBox1.TabStop = false;
+            // 
+            // pbSx
+            // 
+            this.pbSx.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.pbSx.Image = global::TerVerApp.Properties.Resources.Без_имени_3;
+            this.pbSx.InitialImage = null;
+            this.pbSx.Location = new System.Drawing.Point(220, 19);
+            this.pbSx.Name = "pbSx";
+            this.pbSx.Size = new System.Drawing.Size(243, 42);
+            this.pbSx.TabIndex = 1;
+            this.pbSx.TabStop = false;
+            // 
+            // pbDisp
+            // 
+            this.pbDisp.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.pbDisp.Image = global::TerVerApp.Properties.Resources.Без_имени_2;
+            this.pbDisp.InitialImage = null;
+            this.pbDisp.Location = new System.Drawing.Point(220, 19);
+            this.pbDisp.Name = "pbDisp";
+            this.pbDisp.Size = new System.Drawing.Size(243, 150);
+            this.pbDisp.TabIndex = 1;
+            this.pbDisp.TabStop = false;
+            // 
+            // pbMat
+            // 
+            this.pbMat.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.pbMat.Image = ((System.Drawing.Image)(resources.GetObject("pbMat.Image")));
+            this.pbMat.InitialImage = null;
+            this.pbMat.Location = new System.Drawing.Point(220, 19);
+            this.pbMat.Name = "pbMat";
+            this.pbMat.Size = new System.Drawing.Size(243, 150);
+            this.pbMat.TabIndex = 1;
+            this.pbMat.TabStop = false;
+            // 
+            // linkVlad
+            // 
+            this.linkVlad.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.linkVlad.AutoSize = true;
+            this.linkVlad.DisabledLinkColor = System.Drawing.Color.Magenta;
+            this.linkVlad.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.linkVlad.LinkColor = System.Drawing.Color.Magenta;
+            this.linkVlad.Location = new System.Drawing.Point(503, 494);
+            this.linkVlad.Name = "linkVlad";
+            this.linkVlad.Size = new System.Drawing.Size(152, 15);
+            this.linkVlad.TabIndex = 18;
+            this.linkVlad.TabStop = true;
+            this.linkVlad.Text = "https://github.com/kain69";
+            this.linkVlad.VisitedLinkColor = System.Drawing.Color.Magenta;
+            this.linkVlad.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
+            // 
+            // linkSasha
+            // 
+            this.linkSasha.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.linkSasha.AutoSize = true;
+            this.linkSasha.DisabledLinkColor = System.Drawing.Color.Magenta;
+            this.linkSasha.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.linkSasha.LinkColor = System.Drawing.Color.Magenta;
+            this.linkSasha.Location = new System.Drawing.Point(661, 494);
+            this.linkSasha.Name = "linkSasha";
+            this.linkSasha.Size = new System.Drawing.Size(170, 15);
+            this.linkSasha.TabIndex = 19;
+            this.linkSasha.TabStop = true;
+            this.linkSasha.Text = "https://github.com/AirSunday";
+            this.linkSasha.VisitedLinkColor = System.Drawing.Color.Magenta;
+            this.linkSasha.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkSasha_LinkClicked);
             // 
             // Form1
             // 
@@ -938,7 +984,8 @@ namespace TerVerApp
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
-            this.ClientSize = new System.Drawing.Size(1413, 521);
+            this.ClientSize = new System.Drawing.Size(1413, 520);
+            this.Controls.Add(this.btnHelp);
             this.Controls.Add(this.tableGist);
             this.Controls.Add(this.groupBox4);
             this.Controls.Add(this.label4);
@@ -946,7 +993,9 @@ namespace TerVerApp
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.linkSasha);
+            this.Controls.Add(this.linkVlad);
+            this.Controls.Add(this.lblMadeBy);
             this.Controls.Add(this.lblStatus);
             this.Controls.Add(this.grpbxRdBtn);
             this.Controls.Add(this.btnCalc);
@@ -961,15 +1010,12 @@ namespace TerVerApp
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Изи ТерВер сдал!";
             this.grpbxMat.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pbMat)).EndInit();
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
             this.grpbxDisp.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pbDisp)).EndInit();
             this.tableLayoutPanel2.ResumeLayout(false);
             this.tableLayoutPanel2.PerformLayout();
             this.grpbxSx.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pbSx)).EndInit();
             this.tableLayoutPanel3.ResumeLayout(false);
             this.tableLayoutPanel3.PerformLayout();
             this.grpbxRdBtn.ResumeLayout(false);
@@ -978,7 +1024,6 @@ namespace TerVerApp
             this.tableLayoutPanel4.ResumeLayout(false);
             this.tableLayoutPanel4.PerformLayout();
             this.groupBox2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.tableLayoutPanel5.ResumeLayout(false);
             this.tableLayoutPanel5.PerformLayout();
             this.groupBox3.ResumeLayout(false);
@@ -988,6 +1033,10 @@ namespace TerVerApp
             this.groupBox4.ResumeLayout(false);
             this.tableLayoutPanel7.ResumeLayout(false);
             this.tableLayoutPanel7.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbSx)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbDisp)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbMat)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1028,7 +1077,7 @@ namespace TerVerApp
         private System.Windows.Forms.Button btnCalc;
         private System.Windows.Forms.GroupBox grpbxRdBtn;
         private System.Windows.Forms.Label lblStatus;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lblMadeBy;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel4;
         private System.Windows.Forms.TextBox txtbxMed;
@@ -1060,6 +1109,9 @@ namespace TerVerApp
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.TextBox tbxH;
         private System.Windows.Forms.Button btnReCalc;
+        private System.Windows.Forms.Button btnHelp;
+        private System.Windows.Forms.LinkLabel linkVlad;
+        private System.Windows.Forms.LinkLabel linkSasha;
     }
 }
 

@@ -8,6 +8,8 @@ namespace TerVerApp
 {
     public partial class Form1 : Form
     {
+        private bool _wasCalc = false;
+
         public Form1()
         {
             InitializeComponent();
@@ -86,6 +88,7 @@ namespace TerVerApp
 
         private void btnCalc_Click(object sender, EventArgs e)
         {
+            _wasCalc = true;
             tableGist.Visible = false;
             tableGist.Controls.Clear();
             if (txtbxInput.Text == "")
@@ -134,6 +137,8 @@ namespace TerVerApp
 
         private void btnReCalc_Click(object sender, EventArgs e)
         {
+            txtbxInput.Focus();
+            if (!_wasCalc) return;
             tableGist.Visible = false;
             tableGist.Controls.Clear();
 
@@ -142,7 +147,6 @@ namespace TerVerApp
             var seq = txtbxVarSeq.Text.Split(' ').Select(double.Parse).ToList();
 
             CreateTable(seq, countRow);
-
         }
 
         private void CreateTable(List<double> seq, int countRow = 0)
@@ -209,6 +213,23 @@ namespace TerVerApp
                 tableGist.Controls.Add(label4, 3, j);
             }
             tableGist.Visible = true;
+        }
+
+        private void btnHelp_Click(object sender, EventArgs e)
+        {
+            txtbxInput.Focus();
+            var formHelp = (FormHelp)Application.OpenForms["Form3"] ?? new FormHelp();
+            formHelp.Show();
+        }
+
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            System.Diagnostics.Process.Start("https://github.com/kain69");
+        }
+
+        private void linkSasha_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            System.Diagnostics.Process.Start("https://github.com/AirSunday");
         }
     }
 }
